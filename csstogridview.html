@@ -16,15 +16,16 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
+	<link href="assets/css/shCore.css" rel="stylesheet">
+	<link href="assets/css/shCoreDefault.css" rel="stylesheet">
 
     <script src="assets/js/jquery-1.10.2.min.js"></script>
     <script src="assets/js/hover.zoom.js"></script>
     <script src="assets/js/hover.zoom.conf.js"></script>
-	<script type="text/javascript">;
-		$( document ).ready(function() {
-			window.location.href = "blog.html";
-		});
-	</script>
+	<script src="assets/js/shCore.js"></script>
+	<script src="assets/js/shBrushXml.js"></script>
+	<script src="assets/js/shBrushCss.js"></script>
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -43,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="blog.html">Dennis Hernández</a>
+          <a class="navbar-brand" href="blog.html">Dennis Hernández </a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -55,56 +56,77 @@
       </div>
     </div>
 
-	<!-- +++++ Welcome Section +++++ -->
-	<div id="ww">
+	
+	<!-- +++++ Post +++++ -->
+	<div id="white">
 	    <div class="container">
 			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2 centered">
-					<img src="assets/img/user.png" alt="Stanley">
-					<h1>Hi, I am Dennis Hernández!</h1>
-					<p>I was born on November 4th, 1992.
-						I'm a Software Engineering, I work as a software developer for a multinational company that exports coffee, cocoa and cotton.
-						I enjoy cooking, swimming, roller skating and reading technological news.
-						I like database and web design, also I like project management and I have a certain attraction to the field of education. 
-						I work with agile methodologies and I enjoy teamwork</p>
-				</div><!-- /col-lg-8 -->
+				<div class="col-lg-8 col-lg-offset-2">
+					<p><img src="assets/img/user.png" width="50px" height="50px"> <ba>Dennis Hernández</ba></p>
+					<p><bd>May 31, 2013</bd></p>
+					<h4>Applying css to gridview (aspx)</h4>
+					<p>First the <b>gridview</b> is divided in rows, columns, header and footer. 
+					Each of these parts of the gridview can be have a css style. How? Just like that:</p>
+					<p>1. First, define these properties in the gridview:</p>
+					<pre class="brush: xml">
+					<asp:GridView ID=”GridView1″ runat=“server” CssClass=”Grid”>
+					<HeaderStyle CssClass=”GridHeader”> </HeaderStyle> //Header
+					<RowStyle CssClass=”GridRow”> </RowStyle> // Row
+					<AlternatingRowStyle CssClass=”GridRowAlter”></AlternatingRowStyle> //Row
+					
+					<Columns>
+					...
+					</Columns>
+					
+					<FooterStyle CssClass=”GridHeader”> </FooterStyle> //Footer
+					<PagerStyle CssClass=”GridHeader”> </PagerStyle> //Footer 
+					</asp:GridView>
+					</pre>
+					<p>2. Define these rules in CSS:</p>
+					<pre class="brush: css">
+
+					/*GRID*/
+					.Grid
+					{
+					font-family:Arial;
+					background-color: #FFFFFF;
+					border: solid 1px #CCCCCC;
+					}
+
+					.Grid td {
+					padding: 5px 5px 5px 5px;
+					}
+
+					.GridHeader
+					{
+					background-color: #9CC525;
+					padding:50px 0px 50px 0px;
+					}
+
+					.GridHeader th
+					{
+					padding:5px;
+					color: #FFFFFF;
+					}
+
+					.GridRow
+					{
+					color: #000000;
+					background-color: #FFFFFF;
+					}
+					/*END GRID*/
+					</pre>
+					<br>
+					<p><bt>TAGS: <a href="#">CSS</a> - <a href="#">Web Design</a> - <a href="#">ASPX</a></bt></p>
+					<hr>
+					<p><a href="blog.html"># Back</a></p>
+				</div>
+
 			</div><!-- /row -->
 	    </div> <!-- /container -->
-	</div><!-- /ww -->
+	</div><!-- /white -->
 	
 	
-	<!-- +++++ Projects Section +++++ -->
-	
-	<div class="container pt">
-		<div class="row mt centered">	
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/mario.jpg" alt="" style="height: 268px !important;" /></a>
-				<p>Mario-vs-Luigi</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port02.jpg" alt="" /></a>
-				<p>RAIDERS</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port03.jpg" alt="" /></a>
-				<p>VIKINGS</p>
-			</div>
-		</div><!-- /row -->
-		<div class="row mt centered">	
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port04.jpg" alt="" /></a>
-				<p>YODA</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port05.jpg" alt="" /></a>
-				<p>EMPERORS</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port06.jpg" alt="" /></a>
-				<p>CHIEFS</p>
-			</div>
-		</div><!-- /row -->
-	</div><!-- /container -->
 	
 	
 	<!-- +++++ Footer Section +++++ -->
@@ -123,7 +145,7 @@
 				<div class="col-lg-4">
 					<h4>More info:</h4>
 					<p>
-						<a href="http://djhv92.wix.com/dennishernandez" target="_blank">Personal web</a><br/>
+						<a href="http://djhv92.wix.com/dennishernandez" target="_blank">Personal web</a><br/>					
 						<a href="https://github.com/djhvscf" target="_blank">Github</a><br/>
 						<a href="https://twitter.com/djhvs" target="_blank">Twitter</a><br/>
 						<a href="https://www.facebook.com/dennis.hernandezvargas" target="_blank">Facebook</a>
@@ -145,5 +167,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
   </body>
 </html>
