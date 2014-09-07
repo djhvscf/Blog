@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Dennis Hernández </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+	<link href="assets/css/shCore.css" rel="stylesheet">
+	<link href="assets/css/shCoreDefault.css" rel="stylesheet">
+
+    <script src="assets/js/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/hover.zoom.js"></script>
+    <script src="assets/js/hover.zoom.conf.js"></script>
+	<script src="assets/js/shCore.js"></script>
+	<script src="assets/js/shBrushCSharp.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="blog.html">Dennis Hernández </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="blog.html">Blog</a></li>
+			<li><a href="about.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	
+	<!-- +++++ Post +++++ -->
+	<div id="white">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<p><img src="assets/img/user.png" width="50px" height="50px"> <ba>Dennis Hernández</ba></p>
+					<p><bd>June 22, 2013</bd></p>
+					<h4>Evaluating and expression with NCalc</h4>
+					<p>I'm here to explain about <b>NCalc</b> for .NET. If you in those days when you're programming something and you need evaluate some expression like:</p>
+					<pre class="brush: c-sharp">
+					String sExpr = "1000" "<" "2300";
+					</pre>
+					<p>
+					Yes, those things are strings, that’s means that you can´t evaluate normally…
+					
+					<h5>What is NCalc?</h5>
+					
+					NCalc is a mathematical expressions evaluator in .NET. NCalc can parse any expression and evaluate the result, including static or dynamic parameters and custom functions. NCalc is a set of assemblies allowing expressions evaluation. The main class to use is <b>Expression</b>. This class has a method <b>Evaluate()</b> returning the actual value of its <b>String</b> representation.
+					
+					<h5>Case sensitivity</h5>
+					
+					By default, the evaluation process is case sensitive. This means every parameter and function evaluation will match using case. This behavior can be overriden using a specific evaluation option.
+					
+					<pre class="brush: c-sharp">
+					Expression e = new Expression("aBs(-1)", EvaluateOptions.IgnoreCase)
+					Debug.Assert(1M, e.Evaluate());
+					</pre>
+					
+					<h5>Handling errors</h5>
+					
+					When the expression has a syntax error, the evaluation will throw an <b>EvaluationException</b>.
+					
+					<pre class="brush: c-sharp">
+					 try
+					{
+						new Expression("(3 + 2").Evaluate();
+					}
+					catch(EvaluationException e)
+					{
+						Console.WriteLine("Error catched: " + e.Message);
+					}
+					</pre>
+					
+					Though, you can also detect syntax errors before the evaluation by using the <b>HasErrors()</b> method.
+					
+					<pre class="brush: c-sharp">
+					 Expression e = new Expression("a + b * (");
+					 if(e.HasErrors())
+					 {
+						 Console.WriteLine(e.Error);
+					 }
+					</pre>
+					
+					<h5>Expression caching</h5>
+					
+					When <b>Evaluate()</b> is called on an expression, it is compiled once. If the same expression is reused the compilation is not executed again. Thus you can reuse <b>Expression</b> instances by changing the parameters, and you will gain in performance because only the trasversal of the expression tree will be done.
+					Moreover, each compiled expression is cached internaly, which means you don’t even have to care about reusing an <b>Expression</b> instance, the framework will do it for you. The cache is automatically cleaned like the GC does when an Expression is no more used, or memory is needed (i.e. using <b>WeakReference</b>).
+					You can disable this behavior at the framework level by setting false to <b>CacheEnabled</b>.
+					
+					<pre class="brush: c-sharp">
+					 Expression.CacheEnabled = false;
+					</pre>
+					
+					You can also tell a specific <b>Expression</b> instance not to be taken from the cache.
+					
+					<pre class="brush: c-sharp">
+					 Expression e = new Expression("1 + 1", EvaluateOption.NoCache);
+					</pre>
+					
+					<h5>Operator</h5>
+					
+					Expressions can be combined using operators. Each operator as a precedence priority. Here is the list of those expression’s priority.
+					<br>
+					<ol>
+					<li>primary</li>
+					<li>unary</li>
+					<li>power</li>
+					<li>multiplicative</li>
+					<li>additive</li>
+					<li>relational</li>
+					<li>logical</li>
+					</ol>
+					
+					Working on this post...
+					
+					</p>
+					<br>
+					<p><bt>TAGS: <a href="#">CSS</a> - <a href="#">Web Design</a> - <a href="#">ASPX</a></bt></p>
+					<hr>
+					<p><a href="blog.html"># Back</a></p>
+				</div>
+
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /white -->
+	
+	
+	
+	
+	<!-- +++++ Footer Section +++++ -->
+	
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h4>My Bunker</h4>
+					<p>
+						San José, Costa Rica<br/>
+						<a href="mailto:djhv92@hotmail.com">djhv92@hotmail.com </a><br/>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>More info:</h4>
+					<p>
+						<a href="http://djhv92.wix.com/dennishernandez" target="_blank">Personal web</a><br/>					
+						<a href="https://github.com/djhvscf" target="_blank">Github</a><br/>
+						<a href="https://twitter.com/djhvs" target="_blank">Twitter</a><br/>
+						<a href="https://www.facebook.com/dennis.hernandezvargas" target="_blank">Facebook</a>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4></h4>
+					<p></p>
+				</div><!-- /col-lg-4 -->
+			
+			</div>
+		
+		</div>
+	</div>
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+  </body>
+</html>
