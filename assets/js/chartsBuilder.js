@@ -1,7 +1,7 @@
-function(idDiv, type, title, subtitle, categories, xaxisTitle, yaxisTitle, series){
+function createChart(idDiv, chartType, title, subtitle, categories, xaxisTitle, yaxisTitle, series){
 	$(idDiv).highcharts({
 		chart: {
-			type: type
+			type: chartType
 		},
 		title: {
 			text: title
@@ -22,32 +22,75 @@ function(idDiv, type, title, subtitle, categories, xaxisTitle, yaxisTitle, serie
 			},
 			labels: {
 				overflow: 'justify'
-			}
+			}, max: 100
 		},
 		tooltip: {
 			valueSuffix: ' percentage'
 		},
-		plotOptions: {
-			bar: {
-				dataLabels: {
-					enabled: true
-				}
-			}
-		},
-		legend: {
-			layout: 'vertical',
-			align: 'right',
-			verticalAlign: 'top',
-			x: -40,
-			y: 100,
-			floating: true,
-			borderWidth: 1,
-			backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-			shadow: true
-		},
+		plotOptions: getPlotOption(chartType),
+
+		legend: getLegend(chartType),
+		
 		credits: {
 			enabled: false
 		},
 		series: series
 	});
+};
+
+
+function getPlotOption(chartType)
+{
+	var options;
+	switch(chartType)
+	{
+		case 'bar':
+		options = 
+		{
+			plotOptions: {
+				bar: {
+					dataLabels: {
+						enabled: true
+					}
+				}
+			}
+		};
+		return options;
+		break;
+		
+		case 'column':
+		options = 
+		{
+			plotOptions: {
+				column: {
+					dataLabels: {
+						enabled: true
+					}
+				}
+			}
+		};
+		return options;
+		break;
+		
+	};
+};
+
+function getLegend(chartType)
+{
+	var legend = {};
+	if(chartType !== 'column')
+	{
+		var legend = {
+			layout: 'vertical',
+			align: 'right',
+			verticalAlign: 'top',
+			x: -590,
+			y: -10,
+			floating: true,
+			borderWidth: 1,
+			backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+			shadow: true
+		};
+	}
+	return legend
 };
