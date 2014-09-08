@@ -128,7 +128,7 @@
 					<h5>Operator</h5>
 					
 					Expressions can be combined using operators. Each operator as a precedence priority. Here is the list of those expression’s priority.
-					<br>
+					<br/>
 					<ol>
 					<li>primary</li>
 					<li>unary</li>
@@ -139,11 +139,51 @@
 					<li>logical</li>
 					</ol>
 					
-					Working on this post...
+					<h6><a href="http://ncalc.codeplex.com/wikipage?title=operators" target="_blank">*More info</a></h6>
+					
+					<h5>Values</h5>
+					
+					A value is a terminal token representing a concrete element. This can be:
+					</br>
+					<ul>
+					<li>an integer</li>
+					<li>a floating point number</li>
+					<li>a date time</li>
+					<li>a boolean</li>
+					<li>a string</li>
+					<li>a function</li>
+					<li>a parameter</li>
+					</ul>
+					
+					<h6><a href="http://ncalc.codeplex.com/wikipage?title=values" target="_blank">*More info</a></h6>
+					
+					<h5>Now, How can I use it?</h5>
+					
+					First you have to declare a variable string with your expression to evaluate:
+					<pre class="brush: c-sharp">
+					String sExpr = "345" + ">" + "70923";
+					</pre>
+					
+					Next you have to declare a variable NCalc.Expression:
+					<pre class="brush: c-sharp">
+					NCalc.Expression eExpr = new NCalc.Expression(sExpr);
+					</pre>
+					
+					Then, you can convert it to <b>bool</b> if you want to know the expression is valid or invalid like:
+					
+					<pre class="brush: c-sharp">
+					if((bool)eExpr.Evaluate())
+					{
+					...
+					}
+					</pre>
+					
+					With those code lines you can evaluate date, time, double, int, float, etc.
+					If you want more info about <b>NCalc</b>, visit this site <a href=" http://ncalc.codeplex.com/" target="_blank">  http://ncalc.codeplex.com/</a>
 					
 					</p>
 					<br>
-					<p><bt>TAGS: <a href="#">CSS</a> - <a href="#">Web Design</a> - <a href="#">ASPX</a></bt></p>
+					<p><bt>TAGS: <a href="#">C#</a> - <a href="#">NCALC</a> - <a href="#">.NET</a>- <a href="#">Evaluate</a></bt></p>
 					<hr>
 					<p><a href="blog.html"># Back</a></p>
 				</div>
