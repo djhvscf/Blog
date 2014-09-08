@@ -25,7 +25,7 @@ function createChart(idDiv, chartType, title, subtitle, categories, xaxisTitle, 
 			}, max: 100
 		},
 		tooltip: {
-			valueSuffix: ' percentage'
+			valueSuffix: ' %'
 		},
 		plotOptions: getPlotOption(chartType),
 
@@ -69,6 +69,27 @@ function getPlotOption(chartType)
 				}
 			}
 		};
+		return options;
+		break;
+		
+		case 'pie':
+		options =
+		{
+			plotOptions: {
+				pie: {
+					allowPointSelect: true,
+					cursor: 'pointer',
+					dataLabels: {
+						enabled: true,
+						format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+						style: {
+							color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+						}
+					}
+				}
+			}
+		}
+		
 		return options;
 		break;
 		

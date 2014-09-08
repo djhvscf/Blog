@@ -19,63 +19,11 @@
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="assets/js/chartsBuilder.js"></script>	
+	<script src="assets/js/chartsCreator.js"></script>
 	<script type="text/javascript">
 		$(function () {
-			var categories =  ['Knowledge Language'];
-			var series =  
-			[
-				{
-					name: 'C#',
-					data: [95],
-					color: '#1abc9c',
-				},
-				{
-					name: 'Java', 
-					data: [90],
-					//color: '#FF0000'
-				},
-				{
-					name: 'VB',
-					data: [80],
-					//color:
-				},
-				{
-					name: 'ASPX',
-					data: [95],
-					//color:
-				},
-				{
-					name: 'AS3',
-					data: [50],
-					//color:
-				},
-				{
-					name: 'C++',
-					data: [10],
-					//color:
-				},
-				{
-					name: 'HTML, XML, CSS',
-					data: [99],
-					//color:
-				},
-				{
-					name: 'Javascript, jQuery, Ajax',
-					data: [99],
-					//color:
-				},
-				{
-					name: 'PHP',
-					data: [85],
-					//color:
-				},
-				{
-					name: 'Android',
-					data: [90]
-					//color:
-				}
-			];
-			createChart('#language', 'column', '', '', categories, '', '', series);
+			createLanguageChart();
+			createDatabaseChart();
 		});
 		</script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -156,6 +104,7 @@
 			<div class="col-lg-12">
 				<h4>THE SKILLS</h4>
 				<div id="language" style="min-width: 310px; max-width: 100%; height: 400px; margin: 0 auto"></div>
+				<div id="database" style="min-width: 310px; max-width: 100%; height: 400px; margin: 0 auto"></div>
 			</div><!-- /col-lg-6 -->
 		</div><!-- /row -->
 	</div><!-- /container -->
