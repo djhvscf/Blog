@@ -54,7 +54,7 @@ function createLanguageChart()
 					//color:
 				}
 			];
-			createChart('#language', 'column', '', '', categories, '', '', series);
+			createChart('#language', 'column', 'Knowledge in Programming Languages', '', categories, '', '', series);
 };
 
 function createDatabaseChart()
@@ -70,5 +70,29 @@ function createDatabaseChart()
 				]
 			}
 		]
-	createChart('#database', 'pie', '', '', null, '', '', series);
+	createChart('#database', 'pie', 'Knowledge in Databases', '', null, '', '', series);
+};
+
+function createVersionChart()
+{
+	var categories =  ['Knowledge in Version Control System'];
+	var series =  
+				[
+					{
+						name: 'Microsoft SourceSafe',
+						data: [100],
+						//color: '#1abc9c',
+					},
+					{
+						name: 'Git', 
+						data: [95],
+						//color: '#FF0000'
+					},
+					{
+						name: 'TortoiseGit',
+						data: [100],
+						//color:
+					}
+				];
+	createChart('#version', 'column', 'Knowledge in Version Control System', '', categories, '', '', series);
 };
