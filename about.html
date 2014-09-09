@@ -16,17 +16,10 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/image.css">
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="assets/js/chartsBuilder.js"></script>	
-	<script src="assets/js/chartsCreator.js"></script>
-	<script type="text/javascript">
-		$(function () {
-			createLanguageChart();
-			createDatabaseChart();
-			createVersionChart();
-		});
-		</script>
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -103,6 +96,10 @@
 		<div class="row mt">
 			<h4 style="text-align: center;">THE SKILLS</h4>
 			<div class="col-lg-6">
+				<div id="personal" style="min-width: 310px; max-width: 100%; height: 400px; margin: 0 auto"></div>
+			</div><!-- /col-lg-6 -->
+			
+			<div class="col-lg-6">
 				<div id="language" style="min-width: 310px; max-width: 100%; height: 400px; margin: 0 auto"></div>
 			</div><!-- /col-lg-6 -->
 			
@@ -113,6 +110,15 @@
 			<div class="col-lg-6">
 				<div id="version" style="min-width: 310px; max-width: 100%; height: 400px; margin: 0 auto"></div>
 			</div><!-- /col-lg-6 -->
+			
+			<div class="col-lg-6">
+				<div id="ide" style="min-width: 310px; max-width: 100%; height: 400px; margin: 0 auto"></div>
+			</div><!-- /col-lg-6 -->
+			
+			<div class="col-lg-6">
+				<div id="tech" style="min-width: 310px; max-width: 100%; height: 400px; margin: 0 auto"></div>
+			</div><!-- /col-lg-6 -->
+			
 		</div><!-- /row -->
 	</div><!-- /container -->
 	
@@ -156,5 +162,27 @@
     <script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/highcharts.js"></script>
 	<script src="assets/js/exporting.js"></script>
+	<script src="assets/js/chartsBuilder.js"></script>	
+	<script src="assets/js/chartsCreator.js"></script>
+	<script src="assets/js/jquery.scrollUp.js"></script>
+	<script>
+		$(function () {
+			createLanguageChart();
+			createDatabaseChart();
+			createVersionChart();
+			createIDEChart();
+			createTechChart();
+			createPersonalChart();
+			$.scrollUp({
+				animation: 'fade',
+				activeOverlay: 'transparent',
+				scrollImg: {
+					active: true,
+					type: 'background',
+					src: 'assets/img/top.png'
+				}
+			});
+		});
+	</script>
   </body>
 </html>
