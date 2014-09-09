@@ -88,11 +88,24 @@ function getPlotOption(chartType)
 					}
 				}
 			}
-		}
-		
+		};
 		return options;
 		break;
 		
+		case 'line':
+		options = 
+		{
+			plotOptions: {
+				line: {
+					dataLabels: {
+						enabled: true
+					},
+					enableMouseTracking: false
+				}
+			}
+		};
+		return options;
+		break;
 	};
 };
 
