@@ -16,6 +16,7 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/image.css">
 
     <script src="assets/js/jquery-1.10.2.min.js"></script>
     <script src="assets/js/hover.zoom.js"></script>
@@ -139,6 +140,19 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/bootstrap.min.js"></script>
-  
+	<script src="assets/js/jquery.scrollUp.js"></script>
+	<script>
+		$(function () {
+			$.scrollUp({
+				animation: 'fade',
+				activeOverlay: 'transparent',
+				scrollImg: {
+					active: true,
+					type: 'background',
+					src: 'assets/img/top.png'
+				}
+			});
+		});
+	</script>
   </body>
 </html>
