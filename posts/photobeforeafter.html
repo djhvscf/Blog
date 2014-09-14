@@ -18,13 +18,29 @@
     <link href="../assets/css/main.css" rel="stylesheet">
 	<link href="../assets/css/shCore.css" rel="stylesheet">
 	<link href="../assets/css/shCoreDefault.css" rel="stylesheet">
-
+	<style>
+		.beforeAfterSlidebar {
+			position: relative;
+			width: 400px;
+			height: 300px;
+		}
+		.beforeAfterSlidebar div {
+			position: absolute;
+			top: 0px;
+			  left: 0px;
+			  overflow: hidden;
+		}
+		.topImage {
+			border-right: solid 4px black;
+		}
+	</style>
     <script src="../assets/js/jquery-1.10.2.min.js"></script>
     <script src="../assets/js/hover.zoom.js"></script>
     <script src="../assets/js/hover.zoom.conf.js"></script>
 	<script src="../assets/js/shCore.js"></script>
-	<script src="../assets/js/shBrushXml.js"></script>
+	<script src="../assets/js/shBrushJScript.js"></script>
 	<script src="../assets/js/shBrushCss.js"></script>
+	<script src="../assets/js/shBrushXml.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -64,61 +80,68 @@
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
 					<p><img src="../assets/img/user.png" class="userImgLittle userImg"> <ba>Dennis Hernández</ba></p>
-					<p><bd>May 31, 2013</bd></p>
-					<h4>Applying css to gridview (aspx)</h4>
-					<p>First the <b>gridview</b> is divided in rows, columns, header and footer. 
-					Each of these parts of the gridview can be have a css style. How? Just like that:</p>
-					<p>1. First, define these properties in the gridview:</p>
-					<pre class="brush: xml">
-					<asp:GridView ID=”GridView1″ runat=“server” CssClass=”Grid”>
-					<HeaderStyle CssClass=”GridHeader”> </HeaderStyle> //Header
-					<RowStyle CssClass=”GridRow”> </RowStyle> // Row
-					<AlternatingRowStyle CssClass=”GridRowAlter”></AlternatingRowStyle> //Row
+					<p><bd>September 14, 2014</bd></p>
+					<h4>Before and after effect</h4>
+					<p>Hello! Again, yes again. I'm here to share with you a <b>jQuery</b> plugin about before/after effect. Here is the code:</p>
 					
-					<Columns>
-					...
-					</Columns>
-					
-					<FooterStyle CssClass=”GridHeader”> </FooterStyle> //Footer
-					<PagerStyle CssClass=”GridHeader”> </PagerStyle> //Footer 
-					</asp:GridView>
+					<h5>Javascript code:</h5>
+					<pre class="brush: jscript">
+					$(".topImage").css('width', '50%');
+					$(".beforeAfterSlidebar").mousemove(
+						function(e) {
+							// get the mouse x (horizontal) position and offset of the div
+							var offset =  $(this).offset();
+							var iTopWidth = (e.pageX - offset.left);
+							// set width of bottomimage div
+							$(this).find(".topImage").width(iTopWidth);
+						}
+					);
 					</pre>
-					<p>2. Define these rules in CSS:</p>
+					
+					<h5>CSS code:</h5>
 					<pre class="brush: css">
-
-					/*GRID*/
-					.Grid
-					{
-					font-family:Arial;
-					background-color: #FFFFFF;
-					border: solid 1px #CCCCCC;
+					.beforeAfterSlidebar {
+					  position: relative;
+					  width: 800px;
+					  height: 600px;
+					  cursor: pointer;
 					}
-
-					.Grid td {
-					padding: 5px 5px 5px 5px;
+					.beforeAfterSlidebar div {
+					  position: absolute;
+					  top: 0px;
+					  left: 0px;
+					  overflow: hidden;
 					}
-
-					.GridHeader
-					{
-					background-color: #9CC525;
-					padding:50px 0px 50px 0px;
+					.topImage {
+					  border-right: solid 4px black;
 					}
-
-					.GridHeader th
-					{
-					padding:5px;
-					color: #FFFFFF;
-					}
-
-					.GridRow
-					{
-					color: #000000;
-					background-color: #FFFFFF;
-					}
-					/*END GRID*/
 					</pre>
+					
+					<h5>HTML code:</h5>
+					<pre class="brush: html">
+					<div class="beforeAfterSlidebar">
+						<div class="bottomImage">
+							<img src="../img/afterImage.jpg" width="800" height="600" alt="after" />
+						</div>
+						<div class="topImage">
+							<img src="../img/beforeImage.jpg" width="800" height="600" alt="before" />
+						</div>
+					</div>
+					</pre>
+					
+					<h5>Demo:</h5>
+					
+					<div class="beforeAfterSlidebar">
+						<div class="bottomImage">
+							<img src="../assets/img/afterImage.jpg" width="400px" height="300px" alt="after" />
+						</div>
+						<div class="topImage">
+							<img src="../assets/img/beforeImage.jpg" width="400px" height="300px" alt="before" />
+						</div>
+					</div>
+					
 					<br>
-					<p><bt>TAGS: <a href="#">CSS</a> - <a href="#">Web Design</a> - <a href="#">ASPX</a></bt></p>
+					<p><bt>TAGS: <a href="#">Javascript</a> - <a href="#">jQuery</a> - <a href="#">jQuery plugin</a></bt></p>
 					<hr>
 					<p><a href="../blog.html"># Back</a></p>
 				</div>
@@ -146,7 +169,7 @@
 				<div class="col-lg-4">
 					<h4>More info:</h4>
 					<p>
-						<a href="https://drive.google.com/file/d/0B0VokOTJJG_lX1laaUNmalg1QXc/edit?usp=sharing" target="_blank">Curriculum Vitae</a><br/>			
+						<a href="https://drive.google.com/file/d/0B0VokOTJJG_lX1laaUNmalg1QXc/edit?usp=sharing" target="_blank">Curriculum Vitae</a><br/>
 						<a href="https://www.linkedin.com/in/dennishernandezv" target="_blank">LinkedIn</a><br/>
 						<a href="https://github.com/djhvscf" target="_blank">Github</a><br/>
 						<a href="https://twitter.com/djhvs" target="_blank">Twitter</a><br/>
@@ -171,6 +194,17 @@
     <script src="../assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		SyntaxHighlighter.all();
+		$(".topImage").css('width', '50%');
+		  $(".beforeAfterSlidebar").mousemove(
+			function(e) {
+			  // get the mouse x (horizontal) position and offset of the div
+			  var offset =  $(this).offset();
+			  var iTopWidth = (e.pageX - offset.left);
+
+			  // set width of bottomimage div
+			  $(this).find(".topImage").width(iTopWidth);
+			}
+		  );
 	</script>
   </body>
 </html>
