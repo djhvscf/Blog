@@ -18,22 +18,6 @@
     <link href="../assets/css/main.css" rel="stylesheet">
 	<link href="../assets/css/shCore.css" rel="stylesheet">
 	<link href="../assets/css/shCoreDefault.css" rel="stylesheet">
-	<style>
-		.beforeAfterSlidebar {
-			position: relative;
-			width: 400px;
-			height: 300px;
-		}
-		.beforeAfterSlidebar div {
-			position: absolute;
-			top: 0px;
-			  left: 0px;
-			  overflow: hidden;
-		}
-		.topImage {
-			border-right: solid 4px black;
-		}
-	</style>
     <script src="../assets/js/jquery-1.10.2.min.js"></script>
 	<script src="../assets/js/shCore.js"></script>
 	<script src="../assets/js/shBrushJScript.js"></script>
@@ -81,13 +65,27 @@
 					<p><img src="../assets/img/user.png" class="userImgLittle userImg"> <ba>Dennis Hernández</ba></p>
 					<p><bd>September 14, 2014</bd></p>
 					<h4>jValid a jQuery plugin</h4>
-					<p>This my new <b>jQuery</b> plugin to make valid inputs on form fields and HTML elements. You can see and download the code from <a href="https://github.com/djhvscf/jValid" target="_blank">GitHub</a>.</p>
+					<p>This is my new <b>jQuery</b> plugin to make valid inputs on form fields and HTML elements. You can see and download the code from <a href="https://github.com/djhvscf/jValid" target="_blank">GitHub</a>.</p>
 					
 					<p>Now I'm going to teach you how use it.</p>
+					<p>You have to pass the regex with 0 when you want a number and S when you want a letter. Or if you want use a regular expression you have to pass the regular expression and behaviorRegExp: true</p>
 					
 					<h5>Javascript code:</h5>
 					<pre class="brush: jscript">
 						$('#inputmasked').jValid({regex:'0-0000-0000'});
+						$('#crid').jValid({regex:'0-0000-0000'});
+						$('#date').jValid({regex:'00/00/0000'});
+						$('#datehour').jValid({regex:'00/00/0000 00:00:00'});
+						$('#telephone').jValid({regex:'0000-00-00'});
+						$('#telephonecode').jValid({regex:'(000) 0000-00-00'});
+						$('#zip').jValid({regex:'00000-000'});
+						
+						//Regular expressions
+						
+						$('#regnumbers').jValid({regex:'[0-9]', behaviorRegExp: true});
+						$('#regletters').jValid({regex:'[a-zA-Z]', behaviorRegExp: true});
+						$('#regcrazy').jValid({regex:'[a-dD-Z]', behaviorRegExp: true});
+						
 					</pre>
 					
 					<h5>HTML code:</h5>
@@ -98,34 +96,68 @@
 					<h5>Demo:</h5>
 						<div>
 							<table class="table table-responsive table-hover">
-								<tr>
-									<td>
-										<label>Costa Rican ID</label>
-										<input type="text" id="test"></input>
-									</td>
-									<td>
-										<label>Date</label><br/>
-										<input type="text" id="date"></input>
-									</td>
-									<td>							
-										<label>Date/Hour</label>
-										<input type="text" id="dateh"></input>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<label>Telephone</label>
-										<input type="text" id="tele"></input>
-									</td>
-									<td>
-										<label>Telephone with code area</label>
-										<input type="text" id="telecode"></input>
-									</td>
-									<td>							
-										<label>Zip code</label>
-										<input type="text" id="zip"></input>	
-									</td>
-								</tr>
+								<thead>
+									<tr>
+										<th>Regular expressions</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<label>Only number</label><br/>
+											<input type="text" id="regnumbers"></input>
+										</td>
+										<td>
+											<label>Letters</label><br/>
+											<input type="text" id="regletters"></input>
+										</td>
+										<td>							
+											<label>Crazy reg. expression (a-d and D-Z)</label><br/>
+											<input type="text" id="regcrazy"></input>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table table-responsive table-hover">
+								<thead>
+									<tr>
+										<th>Using masks</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<label>Costa Rican ID</label><br/>
+											<input type="text" id="crid"></input>
+										</td>
+										<td>
+											<label>Date</label><br/>
+											<input type="text" id="date"></input>
+										</td>
+										<td>							
+											<label>Date/Hour</label><br/>
+											<input type="text" id="datehour"></input>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label>Telephone</label><br/>
+											<input type="text" id="telephone"></input>
+										</td>
+										<td>
+											<label>Telephone with code area</label><br/>
+											<input type="text" id="telephonecode"></input>
+										</td>
+										<td>							
+											<label>Zip code</label><br/>
+											<input type="text" id="zip"></input>	
+										</td>
+									</tr>
+								</tbody>
 							</table>
 						</div>
 					<br>
@@ -183,12 +215,15 @@
 	<script type="text/javascript">		
 		$(document).ready(function() {
 			SyntaxHighlighter.all();
-			$('#test').jValid({regex:'0-0000-0000'});
+			$('#crid').jValid({regex:'0-0000-0000'});
 			$('#date').jValid({regex:'00/00/0000'});
-			$('#dateh').jValid({regex:'00/00/0000 00:00:00'});
-			$('#tele').jValid({regex:'0000-00-00'});
-			$('#telecode').jValid({regex:'(000) 0000-00-00'});
+			$('#datehour').jValid({regex:'00/00/0000 00:00:00'});
+			$('#telephone').jValid({regex:'0000-00-00'});
+			$('#telephonecode').jValid({regex:'(000) 0000-00-00'});
 			$('#zip').jValid({regex:'00000-000'});
+			$('#regnumbers').jValid({regex:'[0-9]', behaviorRegExp: true});
+			$('#regletters').jValid({regex:'[a-zA-Z]', behaviorRegExp: true});
+			$('#regcrazy').jValid({regex:'[a-dD-Z]', behaviorRegExp: true});
 		});
 	</script>
   </body>
