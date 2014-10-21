@@ -288,3 +288,7 @@ height: 100%;
 .userImg{
 	border-radius: 100%;
 }
+
+.trselected {
+	background-color: #F5F5F5 !important;
+}
