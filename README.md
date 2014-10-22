@@ -1,4 +1,4 @@
-portfolio
-=========
+Personal Blog
+=============
 
-Personal portfolio
+This is my personal Blog
