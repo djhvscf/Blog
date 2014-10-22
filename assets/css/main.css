@@ -288,3 +288,24 @@ height: 100%;
 .userImg{
 	border-radius: 100%;
 }
+
+.trselected {
+	background-color: #1ABC9C;
+	color: #FFFFFF;
+    /* Firefox */
+    -moz-transition: all 1s ease-in;
+    /* WebKit */
+    -webkit-transition: all 1s ease-in;
+    /* Opera */
+    -o-transition: all 1s ease-in;
+    /* Standard */
+    transition: all 1s ease-in;
+}
+
+.trselected:hover {
+	color:#555555;
+	-moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0 ease-in;
+    transition: none;
+}
