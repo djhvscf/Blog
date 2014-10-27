@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="testApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Dennis Hernández </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+	<link href="assets/css/shCore.css" rel="stylesheet">
+	<link href="assets/css/shCoreDefault.css" rel="stylesheet">
+    <script src="assets/js/jquery-1.10.2.min.js"></script>
+	<script src="assets/js/shCore.js"></script>
+	<script src="assets/js/shBrushJScript.js"></script>
+	<script src="assets/js/shBrushCss.js"></script>
+	<script src="assets/js/shBrushXml.js"></script>
+	<script src="assets/js/stringcaser.js"></script>
+	<script src="assets/js/angular/angular.js"></script>
+    <script src="assets/js/angular/angular-route.min.js"></script>
+    <script src="assets/js/angular/angular-resource.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/controllers.js"></script>
+    <script src="assets/js/services.js"></script>
+	<style>
+	.divHH {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+	}
+	.feed-container {
+    width: 74%;
+    float: left;
+}
+.history-container {
+    float: left;
+    width: 25%;
+
+}
+.feed {
+    background: #f0f0f0;
+    color: #333;
+    padding: .5em;
+    margin: 1em;
+}
+.feed img {
+    float: left;
+    clear: left;
+    width: 10%;
+}
+.feed p {
+    float: left;
+    width: 87%;
+    margin-left: 2%;
+}
+
+.history {
+    font-size: .9em;
+    margin: .5em 1em;
+}
+
+.feed:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+	</style>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">Dennis Hernández </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../index.html">Home</a></li>
+			<li><a href="../blog.html">Blog</a></li>
+			<li><a href="../about.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	
+	<!-- +++++ Post +++++ -->
+	<div id="white">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<p><img src="assets/img/user.png" class="userImgLittle userImg"> <ba>Dennis Hernández</ba></p>
+					<p><bd></bd></p>
+					<h4>Last 30 events on GitHub</h4>
+					<div class="feed-container" ng-controller="FeedCtrl">
+						<div class="feed" ng-repeat="event in events" > <!--ng-show="event.payload.comment.body"-->
+							<h4>{{event.type}}</h4>
+							<h4>{{event.repo.name}}</h4>
+							
+							<h4 ng-repeat="commit in event.payload.commits">{{commit.message}}</h4>
+							
+							<img ng-src="{{event.actor.avatar_url}}">
+							<p>{{event.payload.comment.body}}</p>
+						</div>
+					</div>
+					<br>
+					<p><bt>TAGS: <a href="#">Javascript</a> - <a href="#">jQuery</a> - <a href="#">jQuery plugin</a></bt></p>
+					<hr>
+					<p><a href="../blog.html"># Back</a></p>
+				</div>
+
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /white -->
+	
+	
+	
+	
+	<!-- +++++ Footer Section +++++ -->
+	
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h4>My Bunker</h4>
+					<p>
+						San José, Costa Rica<br/>
+						<a href="mailto:djhv92@hotmail.com">djhv92@hotmail.com </a><br/>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>More info:</h4>
+					<p>
+						<a href="https://drive.google.com/file/d/0B0VokOTJJG_lX1laaUNmalg1QXc/edit?usp=sharing" target="_blank">Curriculum Vitae</a><br/>
+						<a href="https://www.linkedin.com/in/dennishernandezv" target="_blank">LinkedIn</a><br/>
+						<a href="https://github.com/djhvscf" target="_blank">Github</a><br/>
+						<a href="https://twitter.com/djhvs" target="_blank">Twitter</a><br/>
+						<a href="https://www.facebook.com/dennis.hernandezvargas" target="_blank">Facebook</a>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4></h4>
+					<p></p>
+				</div><!-- /col-lg-4 -->
+			
+			</div>
+		
+		</div>
+	</div>
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript">		
+		$(document).ready(function() {
+			SyntaxHighlighter.all();
+			$('#input1').stringcaser({humanReadable:true});
+			$('#textarea1').stringcaser({humanReadable:true});
+			$('#span1').stringcaser({humanReadable:true});
+		});
+	</script>
+  </body>
+</html>
