@@ -12,69 +12,18 @@
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-
+	<link href="assets/css/bootstrap-table.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
-	<link href="assets/css/shCore.css" rel="stylesheet">
-	<link href="assets/css/shCoreDefault.css" rel="stylesheet">
     <script src="assets/js/jquery-1.10.2.min.js"></script>
-	<script src="assets/js/shCore.js"></script>
-	<script src="assets/js/shBrushJScript.js"></script>
-	<script src="assets/js/shBrushCss.js"></script>
-	<script src="assets/js/shBrushXml.js"></script>
-	<script src="assets/js/stringcaser.js"></script>
+	<script src="assets/js/bootstrap-table.js"></script>    
 	<script src="assets/js/angular/angular.js"></script>
     <script src="assets/js/angular/angular-route.min.js"></script>
     <script src="assets/js/angular/angular-resource.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/controllers.js"></script>
     <script src="assets/js/services.js"></script>
-	<style>
-	.divHH {
-    width: 320px;
-    padding: 10px;
-    border: 5px solid gray;
-    margin: 0;
-	}
-	.feed-container {
-    width: 74%;
-    float: left;
-}
-.history-container {
-    float: left;
-    width: 25%;
-
-}
-.feed {
-    background: #f0f0f0;
-    color: #333;
-    padding: .5em;
-    margin: 1em;
-}
-.feed img {
-    float: left;
-    clear: left;
-    width: 10%;
-}
-.feed p {
-    float: left;
-    width: 87%;
-    margin-left: 2%;
-}
-
-.history {
-    font-size: .9em;
-    margin: .5em 1em;
-}
-
-.feed:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-	</style>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -114,22 +63,79 @@
 				<div class="col-lg-8 col-lg-offset-2">
 					<p><img src="assets/img/user.png" class="userImgLittle userImg"> <ba>Dennis Hernández</ba></p>
 					<p><bd></bd></p>
-					<h4>Last 30 events on GitHub</h4>
-					<div class="feed-container" ng-controller="FeedCtrl">
-						<div class="feed" ng-repeat="event in events" > <!--ng-show="event.payload.comment.body"-->
-							<h4>{{event.type}}</h4>
-							<h4>{{event.repo.name}}</h4>
-							
-							<h4 ng-repeat="commit in event.payload.commits">{{commit.message}}</h4>
-							
-							<img ng-src="{{event.actor.avatar_url}}">
-							<p>{{event.payload.comment.body}}</p>
-						</div>
-					</div>
+					<h4>Last 30 events on GitHub.</h4>
+					<p>Showing with <a href="#" onclick="javascript:showTable('angular', 'bstable'); return false;">Angular JS</a> or 
+					<a href="#" onclick="javascript:showTable('bstable', 'angular'); return false;">Bootstrap Table</a>.</p>
+					<p id="angularp" style="display:none">This table is using Angular JS:</p>
+					<table id="angular" style="display:none" class="table table-responsive table-hover" cellspacing="0" ng-controller="FeedCtrl">
+						<thead>
+							<tr>
+								<tr>
+									<td>
+										Avatar
+									</td>
+									<td>
+										Type
+									</td>
+									<td>
+										Repository name
+									</td>
+									<td>
+										Commit Message
+									</td>
+									<td>
+										Coments
+									</td>
+								</tr>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="event in events">
+								<td>
+									<img ng-src="{{event.actor.avatar_url}}" width="50px" height="50px">
+								</td>
+								<td>
+									{{event.type}}
+								</td>
+								<td>
+									{{event.repo.name}}
+								</td>
+								<td>
+									<span ng-repeat="commit in event.payload.commits">{{commit.message}} - </span>
+								</td>
+								<td>
+									{{event.payload.comment.body}}
+								</td>
+							</tr>
+						</tbody>
+					</table>
 					<br>
-					<p><bt>TAGS: <a href="#">Javascript</a> - <a href="#">jQuery</a> - <a href="#">jQuery plugin</a></bt></p>
+					<p id="bstablep">This table is using Bootstrap Table:</p>
+					<table id="bstable" data-toggle="table" data-url="https://api.github.com/users/djhvscf/events?callback=JSON_CALLBACK">
+						<thead>
+							<tr>
+								<th data-field="type">Item ID</th>
+								<!--<td>
+										Avatar
+									</td>
+									<td>
+										Type
+									</td>
+									<td>
+										Repository name
+									</td>
+									<td>
+										Commit Message
+									</td>
+									<td>
+										Coments
+									</td>-->
+							</tr>
+						</thead>
+					</table>
+					<p><bt>TAGS: <a href="#">Git</a> - <a href="#">GitHub</a> - <a href="#">Experiments</a></bt></p>
 					<hr>
-					<p><a href="../blog.html"># Back</a></p>
+					<p><a href="blog.html"># Back</a></p>
 				</div>
 
 			</div><!-- /row -->
@@ -178,13 +184,17 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript">		
-		$(document).ready(function() {
-			SyntaxHighlighter.all();
-			$('#input1').stringcaser({humanReadable:true});
-			$('#textarea1').stringcaser({humanReadable:true});
-			$('#span1').stringcaser({humanReadable:true});
-		});
+	<script>
+		function showTable(id, idhidden) {
+			var method = $('#'+id).is(":visible") ? 'hide' : 'show',
+				method2 = $('#'+idhidden).is(":visible") ? 'hide' : 'show';
+			
+			$('#'+id)[method]();
+			$('#'+id+"p")[method]();
+			$('#'+idhidden)[method2]();
+			$('#'+idhidden+"p")[method2]();
+			return false;
+		};
 	</script>
   </body>
 </html>
