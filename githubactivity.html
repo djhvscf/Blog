@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="githubactivity">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Dennis Hernández </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-table.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <script src="assets/js/jquery-1.10.2.min.js"></script>
+	<script src="assets/js/bootstrap-table.js"></script>    
+	<script src="assets/js/angular/angular.js"></script>
+    <script src="assets/js/angular/angular-route.min.js"></script>
+    <script src="assets/js/angular/angular-resource.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/controllers.js"></script>
+    <script src="assets/js/services.js"></script>
+	<script src="assets/js/githubactivity.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">Dennis Hernández </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Home</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="about.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	
+	<!-- +++++ Post +++++ -->
+	<div id="white">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<p><img src="assets/img/user.png" class="userImgLittle userImg"> <ba>Dennis Hernández</ba></p>
+					<p><bd></bd></p>
+					<h4>Last 30 events on GitHub.</h4>
+					<p>Showing with <a href="#" onclick="javascript:showTable('angular', 'bstable', 'bootstrap-table'); return false;">Angular JS</a> or 
+					<a href="#" onclick="javascript:showTable('bstable', 'angular', 'bootstrap-table'); return false;">Bootstrap Table</a>.</p>
+					<p id="angularp" style="display:none">This table is using Angular JS:</p>
+					<table id="angular" style="display:none" class="table table-responsive table-hover" cellspacing="0" ng-controller="FeedCtrl">
+						<thead>
+							<tr>
+								<tr>
+									<td>
+										Avatar
+									</td>
+									<td>
+										Type
+									</td>
+									<td>
+										Repository name
+									</td>
+									<td>
+										Commit Message
+									</td>
+									<td>
+										Coments
+									</td>
+								</tr>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="event in events">
+								<td>
+									<img ng-src="{{event.actor.avatar_url}}" width="50px" height="50px">
+								</td>
+								<td>
+									{{event.type}}
+								</td>
+								<td>
+									{{event.repo.name}}
+								</td>
+								<td>
+									<span ng-repeat="commit in event.payload.commits">{{commit.message}} - </span>
+								</td>
+								<td>
+									{{event.payload.comment.body}}
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+					<p id="bstablep">This table is using Bootstrap Table:</p>
+					<table id="bstable" data-show-toggle="true">
+						<thead>
+							<tr>
+								<th data-field="actor.avatar_url" data-formatter="getImg">Avatar</th>
+								<th data-field="type" data-sortable="true">Type</th>
+								<th data-field="repo.name" data-sortable="true">Repository name</th>
+								<th data-field="payload.commits.0.message">Commit Message</th>
+								<th data-field="payload.comment.body">Coments</th>
+							</tr>
+						</thead>
+					</table>
+					<p><bt>TAGS: <a href="#">Git</a> - <a href="#">GitHub</a> - <a href="#">Experiments</a></bt></p>
+					<hr>
+					<p><a href="blog.html"># Back</a></p>
+				</div>
+
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /white -->
+	
+	
+	
+	
+	<!-- +++++ Footer Section +++++ -->
+	
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h4>My Bunker</h4>
+					<p>
+						San José, Costa Rica<br/>
+						<a href="mailto:djhv92@hotmail.com">djhv92@hotmail.com </a><br/>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>More info:</h4>
+					<p>
+						<a href="https://drive.google.com/file/d/0B0VokOTJJG_lX1laaUNmalg1QXc/edit?usp=sharing" target="_blank">Curriculum Vitae</a><br/>
+						<a href="https://www.linkedin.com/in/dennishernandezv" target="_blank">LinkedIn</a><br/>
+						<a href="https://github.com/djhvscf" target="_blank">Github</a><br/>
+						<a href="https://twitter.com/djhvs" target="_blank">Twitter</a><br/>
+						<a href="https://www.facebook.com/dennis.hernandezvargas" target="_blank">Facebook</a>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4></h4>
+					<p></p>
+				</div><!-- /col-lg-4 -->
+			
+			</div>
+		
+		</div>
+	</div>
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
