@@ -1,12 +1,7 @@
-angular.module('testApp', [
-    'testApp.services',
-    'testApp.controllers'
+angular.module('githubactivity', [
+    'githubactivity.services',
+    'githubactivity.controllers'
 ])
-.config(function (styleProvider) {
-    styleProvider.setStyles({
-        history: {
-            border: "#aaa 2px dashed",
-            background: "#eee"
-        }
-    });
+.config(function () {
+    //TODO
 });

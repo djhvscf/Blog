@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="testApp">
+<html lang="en" ng-app="githubactivity">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,6 +24,7 @@
     <script src="assets/js/app.js"></script>
     <script src="assets/js/controllers.js"></script>
     <script src="assets/js/services.js"></script>
+	<script src="assets/js/githubactivity.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -46,9 +47,9 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../index.html">Home</a></li>
-			<li><a href="../blog.html">Blog</a></li>
-			<li><a href="../about.html">About</a></li>
+            <li><a href="index.html">Home</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="about.html">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -64,8 +65,8 @@
 					<p><img src="assets/img/user.png" class="userImgLittle userImg"> <ba>Dennis Hernández</ba></p>
 					<p><bd></bd></p>
 					<h4>Last 30 events on GitHub.</h4>
-					<p>Showing with <a href="#" onclick="javascript:showTable('angular', 'bstable'); return false;">Angular JS</a> or 
-					<a href="#" onclick="javascript:showTable('bstable', 'angular'); return false;">Bootstrap Table</a>.</p>
+					<p>Showing with <a href="#" onclick="javascript:showTable('angular', 'bstable', 'bootstrap-table'); return false;">Angular JS</a> or 
+					<a href="#" onclick="javascript:showTable('bstable', 'angular', 'bootstrap-table'); return false;">Bootstrap Table</a>.</p>
 					<p id="angularp" style="display:none">This table is using Angular JS:</p>
 					<table id="angular" style="display:none" class="table table-responsive table-hover" cellspacing="0" ng-controller="FeedCtrl">
 						<thead>
@@ -111,25 +112,14 @@
 					</table>
 					<br>
 					<p id="bstablep">This table is using Bootstrap Table:</p>
-					<table id="bstable" data-toggle="table" data-url="https://api.github.com/users/djhvscf/events?callback=JSON_CALLBACK">
+					<table id="bstable" data-show-toggle="true">
 						<thead>
 							<tr>
-								<th data-field="type">Item ID</th>
-								<!--<td>
-										Avatar
-									</td>
-									<td>
-										Type
-									</td>
-									<td>
-										Repository name
-									</td>
-									<td>
-										Commit Message
-									</td>
-									<td>
-										Coments
-									</td>-->
+								<th data-field="actor.avatar_url" data-formatter="getImg">Avatar</th>
+								<th data-field="type" data-sortable="true">Type</th>
+								<th data-field="repo.name" data-sortable="true">Repository name</th>
+								<th data-field="payload.commits.0.message">Commit Message</th>
+								<th data-field="payload.comment.body">Coments</th>
 							</tr>
 						</thead>
 					</table>
@@ -184,17 +174,5 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/bootstrap.min.js"></script>
-	<script>
-		function showTable(id, idhidden) {
-			var method = $('#'+id).is(":visible") ? 'hide' : 'show',
-				method2 = $('#'+idhidden).is(":visible") ? 'hide' : 'show';
-			
-			$('#'+id)[method]();
-			$('#'+id+"p")[method]();
-			$('#'+idhidden)[method2]();
-			$('#'+idhidden+"p")[method2]();
-			return false;
-		};
-	</script>
   </body>
 </html>
