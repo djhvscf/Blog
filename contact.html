@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>STANLEY - Free Bootstrap Theme </title>
+    <title>Dennis Hernández </title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -16,11 +16,13 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<link rel="stylesheet" href="assets/css/bootstrapValidator.min.css"/>
+    <script src="assets/js/jquery-1.10.2.min.js"></script>
     <script src="assets/js/hover.zoom.js"></script>
     <script src="assets/js/hover.zoom.conf.js"></script>
-
+	<script src="assets/js/bootstrapValidator.min.js"></script>
+	<script src="assets/js/jquery.noty.packaged.min.js"></script>
+	
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -39,13 +41,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">STANLEY</a>
+          <a class="navbar-brand" href="index.html">Dennis Hernández</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="work.html">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html">Home</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -60,28 +62,46 @@
 			<div class="col-lg-6 col-lg-offset-3 centered">
 				<h3>CONTACT ME</h3>
 				<hr>
-				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+				<p>If you want contact me, just fill this form and I will contact to you. Thank you.</p>
 			</div>
 		</div>
 		<div class="row mt">	
 			<div class="col-lg-8 col-lg-offset-2">
-				<form role="form">
-				  <div class="form-group">
-				    <input type="name" class="form-control" id="NameInputEmail1" placeholder="Your Name">
-				    <br>
-				  </div>
-				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-				    <br>
-				  </div>
-				  <div class="form-group">
-				    <input type="email" class="form-control" id="subjectEmail1" placeholder="Subject">
-				    <br>
-				  </div>
-				  <textarea class="form-control" rows="6" placeholder="Enter your text here"></textarea>
-				    <br>
-				  <button type="submit" class="btn btn-success">SUBMIT</button>
-				</form>    			
+				<form role="form" class="form-horizontal" action="https://mandrillapp.com/api/1.0/messages/send.json" id="contactme">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Your name" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Email</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Your email address" />
+                        </div>
+                    </div>
+					
+					<div class="form-group">
+                        <label class="col-sm-3 control-label">Subject</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" autocomplete="off">
+                        </div>
+                    </div>
+					
+					 <div class="form-group">
+                        <label class="col-sm-3 control-label">Comments</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" rows="6" placeholder="Enter your comments here" id="content" autocomplete="off"></textarea>
+                        </div>
+                    </div>
+					
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <button type="submit" id="submitcontactme" class="btn btn-success">SUBMIT</button>
+                        </div>
+                    </div>
+                </form>
 			</div>
 		</div><!-- /row -->
 	</div><!-- /container -->
@@ -95,35 +115,41 @@
 				<div class="col-lg-4">
 					<h4>My Bunker</h4>
 					<p>
-						Some Address 987,<br/>
-						+34 9054 5455, <br/>
-						Madrid, Spain.
+						San José, Costa Rica<br/>
+						<a href="mailto:djhv92@hotmail.com">djhv92@hotmail.com </a><br/>
 					</p>
 				</div><!-- /col-lg-4 -->
 				
 				<div class="col-lg-4">
-					<h4>My Links</h4>
+					<h4>More info:</h4>
 					<p>
-						<a href="#">Dribbble</a><br/>
-						<a href="#">Twitter</a><br/>
-						<a href="#">Facebook</a>
+						<a href="https://drive.google.com/file/d/0B0VokOTJJG_lX1laaUNmalg1QXc/edit?usp=sharing" target="_blank">Curriculum Vitae</a><br/>
+						<a href="https://www.linkedin.com/in/dennishernandezv" target="_blank">LinkedIn</a><br/>
+						<a href="https://github.com/djhvscf" target="_blank">Github</a><br/>
+						<a href="https://twitter.com/djhvs" target="_blank">Twitter</a><br/>
+						<a href="https://www.facebook.com/dennis.hernandezvargas" target="_blank">Facebook</a>
 					</p>
 				</div><!-- /col-lg-4 -->
 				
 				<div class="col-lg-4">
-					<h4>About Stanley</h4>
-					<p>This cute theme was created to showcase your work in a simple way. Use it wisely.</p>
-				</div><!-- /col-lg-4 -->
+					<h4></h4>
+					<p></p>
+			</div><!-- /col-lg-4 -->
 			
 			</div>
 		
+		</div>
+		<br>
+		<div class="divCounter">
+			<script type="text/javascript" src="http://counter1.statcounterfree.com/private/countertab.js?c=b04de0a4d1a4c048c78604c801ddf1d5"></script>
 		</div>
 	</div>
 	
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Placed at the end of the document so the pages load faster-->
     <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/contactme.js"></script>
   </body>
 </html>
