@@ -23,7 +23,7 @@
 	<script src="../../../assets/js/shBrushJScript.js"></script>
 	<script src="../../../assets/js/shBrushCss.js"></script>
 	<script src="../../../assets/js/shBrushXml.js"></script>
-	<script src="../../../assets/js/stringcaser.js"></script>
+	<script src="../../../assets/js/flatJSON.min.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -63,50 +63,58 @@
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
 					<p><img src="../../../assets/img/user.png" class="userImgLittle userImg"> <ba>Dennis Hernández</ba></p>
-					<p><bd>October 26, 2014</bd></p>
-					<h4>StringCaser a jQuery plugin</h4>
-					<p>This is my new <b>jQuery</b> plugin that convert a string separated string to CamelCase: foo-bar → fooBar or underscore_case: foo-bar → foo_bar. You can see and download the code from <a href="https://github.com/djhvscf/stringcaser" target="_blank">GitHub</a>.</p>
+					<p><bd>October 30, 2014</bd></p>
+					<h4>flatJSON a jQuery plugin</h4>
+					<p>This is my new <b>jQuery</b> plugin that convert a JSON object to flat JSON object You can see and download the code from <a href="https://github.com/djhvscf/flatJSON" target="_blank">GitHub</a>.</p>
 					<p>Now I'm going to teach you how to use it.</p>
-					<p>You have to pass the DOM element and if the elements is input or textarea the plugin will bind paste, blur, change events. The plugin have two parameters: 1- method: Means CamelCase or underscroe_case
-					and 2- humanReadable: Means that the conversion of the string is human readable</p>
+					<p>You have to pass a JSON object to plugin calling the main function, like:</p>
 					
 					<h5>Javascript code:</h5>
 					<pre class="brush: jscript">
-						$('#input').stringcaser({method:'CamelCase', humanReadable: true});
-						$('#textarea').stringcaser({method:'underscore_case', humanReadable: false});
-						$('#span').stringcaser();
+						//Create the object
+						var objTest = 
+									[
+										{
+											test1: {
+														extra:'1'
+													}, 
+											test2: {
+														test3: '3'
+													}, 
+										    'test4': '4', 
+											test5: {
+														test6:{
+																test7:'7', 
+																test8:'8'
+															   }, 
+													   test9:'9'
+												   }
+									   }
+								   ];
+						//Call the functiion passing the object and then this function will return a flat JSON object
+						$.flatJSON({data:objTest});
 					</pre>
 					
-					<h5>HTML code:</h5>
-					<pre class="brush: html">
-						<input type="text" id="input"></input>
-						<textarea id="textarea" style="margin: 0px; width: 418px; height: 131px;"></textarea>
-						<span id="span">String to test</span>
-					</pre>
+					<p>And then when We receive the object We can see the difference between objects</p>
 					
 					<h5>Demo:</h5>
 						<div>
 							<table class="table table-responsive table-hover">
 								<thead>
 									<tr>
-										<th>DOM Elements</th>
-										<th></th>
-										<th></th>
+										<th>Normal JSON object</th>
+										<th>Flat JSON object</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td>
-											<label>Input element</label><br/>
-											<input type="text" id="input1"></input>
+											<label></label><br/>
+											<textarea id="normalJSON" style="margin: 0px; width: 318px; height: 372px;"></textarea>
 										</td>
 										<td>
-											<label>Textarea element</label><br/>
-											<textarea id="textarea1" style="margin: 0px; width: 318px; height: 111px;"></textarea>
-										</td>
-										<td>							
-											<label>Span element (Click it!)</label><br/>
-											<span id="span1">string to test</span>
+											<label></label><br/>
+											<textarea id="flatJSON" style="margin: 0px; width: 318px; height: 372px;"></textarea>
 										</td>
 									</tr>
 								</tbody>
@@ -167,9 +175,9 @@
 	<script type="text/javascript">		
 		$(document).ready(function() {
 			SyntaxHighlighter.all();
-			$('#input1').stringcaser({humanReadable:true});
-			$('#textarea1').stringcaser({humanReadable:true});
-			$('#span1').stringcaser({humanReadable:true});
+			var objTest = [{test1: {extra:'1'}, test2: {test3: '3'}, 'test4': '4', test5: {test6:{test7:'7', test8:'8'}, test9:'9'}}];
+			document.getElementById("normalJSON").value = "objTest: " + JSON.stringify(objTest, undefined, 2);
+			document.getElementById("flatJSON").value = "objTest: " + JSON.stringify($.flatJSON({data:objTest}), undefined, 2);
 		});
 	</script>
   </body>
