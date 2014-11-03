@@ -180,6 +180,10 @@ function createTechChart()
 						name: 'Spring',
 						data: [95],
 						//color:
+					},
+					{
+						name: 'Undescore.js',
+						data: [60]
 					}
 				];
 	createChart('#tech', 'column', 'Knowledge in technologies', '', categories, '', '', series);
