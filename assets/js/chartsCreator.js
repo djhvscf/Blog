@@ -184,6 +184,10 @@ function createTechChart()
 					{
 						name: 'Undescore.js',
 						data: [60]
+					},
+					{
+						name: 'Windows Presentation Foundation (WPF)',
+						data: [40]
 					}
 				];
 	createChart('#tech', 'column', 'Knowledge in technologies', '', categories, '', '', series);
