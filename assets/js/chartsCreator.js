@@ -102,6 +102,21 @@ function createVersionChart()
 						name: 'TortoiseGit',
 						data: [100],
 						//color:
+					},
+					{
+						name: 'Subversion',
+						data: [80],
+						//color:
+					},
+					{
+						name: 'TortoiseSVN',
+						data: [95],
+						//color:
+					},
+					{
+						name: 'VisualSVN',
+						data: [40],
+						//color:
 					}
 				];
 	createChart('#version', 'column', 'Knowledge in Version Control System', '', categories, '', '', series);
