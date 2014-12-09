@@ -70,8 +70,8 @@ function createDatabaseChart()
 				name: 'Database',
 				data: [
 					['MySQL',   90],
-					['SQL Server 2008 R2', 95],
-					['Oracle',    80],
+					['SQL Server 2008 R2 / 2012', 95],
+					['Oracle 11g',    80],
 				]
 			}
 		]
