@@ -1,0 +1,146 @@
+/*
+==================================================
+==================================================
+
+PURPLE SKIN
+
+==================================================
+==================================================
+*/
+
+.purple ::selection {
+	background:#D786FE;
+	color:#FFF;
+}
+
+.purple ::-moz-selection{
+	background:#D786FE;
+	color:#FFF;
+}
+
+.purple .navbar {
+    background-color: #D786FE;
+}
+
+.purple textarea:focus,
+.purple input[type="text"]:focus,
+.purple input[type="password"]:focus,
+.purple input[type="datetime"]:focus,
+.purple input[type="datetime-local"]:focus,
+.purple input[type="date"]:focus,
+.purple input[type="month"]:focus,
+.purple input[type="time"]:focus,
+.purple input[type="week"]:focus,
+.purple input[type="number"]:focus,
+.purple input[type="email"]:focus,
+.purple input[type="url"]:focus,
+.purple input[type="search"]:focus,
+.purple input[type="tel"]:focus,
+.purple input[type="color"]:focus,
+.purple .form-control:focus{
+    border: 2px solid #D786FE;
+    background:#FFF;
+}
+
+
+
+.purple .btn-default:hover,.purple .btn-default:active{
+	background:#FFF;
+	border-color:#D786FE !important;
+	color:#D786FE;
+}
+
+.purple .btn-primary:hover,.purple .btn-primary:active,.purple .btn-primary:focus{
+	background:#FFF;
+	border-color:#FFF !important;
+	color:#D786FE;
+	outline:none;
+}
+
+
+.purple .navbar-custom .nav li a {
+    border-top: 3px solid #D786FE;
+}
+
+.purple .navbar-custom .nav li.active a {
+    color: #FFF;
+    border-top: 3px solid #FFF;
+}
+
+.purple .section-heading h2 {
+    color: #D786FE;
+}
+
+.purple .progress-bar {
+    background:#D786FE;
+}
+
+.purple .facts-detail span {
+    color:#D786FE;
+}
+
+.purple .service-box-icon {
+    color: #FFF;
+    background:#D786FE;
+}
+
+.purple .portfolio-filters li {
+    border: 2px solid #D786FE;
+}
+
+.purple .portfolio-filters li:hover{
+    background-color: #D786FE;
+    color:#fff;
+    border-color:#D786FE;
+}
+
+.purple .portfolio-filters li.active{
+    background-color:#D786FE;
+    color:#fff;
+    border-color:#D786FE;
+}
+
+.purple .image-overlay{
+    background: rgba(215,134,254,.6);
+}
+
+.purple .cv-timeline-main:before {
+    background:#D786FE;
+}
+
+.purple .cv-timeline-main > li .time-icon {
+    color: #D786FE;
+}
+
+.purple .cv-timeline-main h4 {
+    color: #D786FE;
+}
+
+.purple #testimonials .section-heading h2 {
+    color: #FFF;
+}
+
+.purple #testimonials .owl-controls .owl-page.active span {
+    background: #D786FE;
+}
+
+.purple .contact-address i {
+    border: 1px solid #D786FE;
+    color: #D786FE;
+}
+
+.purple .scrollup {
+	background:rgba(215,134,254,.9);
+}
+
+.purple .scrollup:hover{
+	background:rgba(215,134,254,.6);
+}
+
+.purple footer {
+    background:#D786FE;
+}
+
+.purple footer ul.footer-social li a:hover {
+    color: #D786FE;
+}

@@ -1,0 +1,146 @@
+/*
+==================================================
+==================================================
+
+BLUE SKIN
+
+==================================================
+==================================================
+*/
+
+.blue ::selection {
+	background:#3AC2E4;
+	color:#FFF;
+}
+
+.blue ::-moz-selection{
+	background:#3AC2E4;
+	color:#FFF;
+}
+
+.blue .navbar {
+    background-color: #3AC2E4;
+}
+
+.blue textarea:focus,
+.blue input[type="text"]:focus,
+.blue input[type="password"]:focus,
+.blue input[type="datetime"]:focus,
+.blue input[type="datetime-local"]:focus,
+.blue input[type="date"]:focus,
+.blue input[type="month"]:focus,
+.blue input[type="time"]:focus,
+.blue input[type="week"]:focus,
+.blue input[type="number"]:focus,
+.blue input[type="email"]:focus,
+.blue input[type="url"]:focus,
+.blue input[type="search"]:focus,
+.blue input[type="tel"]:focus,
+.blue input[type="color"]:focus,
+.blue .form-control:focus{
+    border: 2px solid #3AC2E4;
+    background:#FFF;
+}
+
+
+
+.blue .btn-default:hover,.blue .btn-default:active{
+	background:#FFF;
+	border-color:#3AC2E4 !important;
+	color:#3AC2E4;
+}
+
+.blue .btn-primary:hover,.blue .btn-primary:active,.blue .btn-primary:focus{
+	background:#FFF;
+	border-color:#FFF !important;
+	color:#3AC2E4;
+	outline:none;
+}
+
+
+.blue .navbar-custom .nav li a {
+    border-top: 3px solid #3AC2E4;
+}
+
+.blue .navbar-custom .nav li.active a {
+    color: #FFF;
+    border-top: 3px solid #FFF;
+}
+
+.blue .section-heading h2 {
+    color: #3AC2E4;
+}
+
+.blue .progress-bar {
+    background:#3AC2E4;
+}
+
+.blue .facts-detail span {
+    color:#3AC2E4;
+}
+
+.blue .service-box-icon {
+    color: #FFF;
+    background:#3AC2E4;
+}
+
+.blue .portfolio-filters li {
+    border: 2px solid #3AC2E4;
+}
+
+.blue .portfolio-filters li:hover{
+    background-color: #3AC2E4;
+    color:#fff;
+    border-color:#3AC2E4;
+}
+
+.blue .portfolio-filters li.active{
+    background-color:#3AC2E4;
+    color:#fff;
+    border-color:#3AC2E4;
+}
+
+.blue .image-overlay{
+    background: rgba(58,194,288,.6);
+}
+
+.blue .cv-timeline-main:before {
+    background:#3AC2E4;
+}
+
+.blue .cv-timeline-main > li .time-icon {
+    color: #3AC2E4;
+}
+
+.blue .cv-timeline-main h4 {
+    color: #3AC2E4;
+}
+
+.blue #testimonials .section-heading h2 {
+    color: #FFF;
+}
+
+.blue #testimonials .owl-controls .owl-page.active span {
+    background: #3AC2E4;
+}
+
+.blue .contact-address i {
+    border: 1px solid #3AC2E4;
+    color: #3AC2E4;
+}
+
+.blue .scrollup {
+	background:rgba(58,194,288,.9);
+}
+
+.blue .scrollup:hover{
+	background:rgba(58,194,288,.6);
+}
+
+.blue footer {
+    background:#3AC2E4;
+}
+
+.blue footer ul.footer-social li a:hover {
+    color: #3AC2E4;
+}

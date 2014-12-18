@@ -1,0 +1,146 @@
+/*
+==================================================
+==================================================
+
+DARK SEA SKIN
+
+==================================================
+==================================================
+*/
+
+.darksea ::selection {
+	background:#1ABC9C;
+	color:#FFF;
+}
+
+.darksea ::-moz-selection{
+	background:#1ABC9C;
+	color:#FFF;
+}
+
+.darksea .navbar {
+    background-color: #1ABC9C;
+}
+
+.darksea textarea:focus,
+.darksea input[type="text"]:focus,
+.darksea input[type="password"]:focus,
+.darksea input[type="datetime"]:focus,
+.darksea input[type="datetime-local"]:focus,
+.darksea input[type="date"]:focus,
+.darksea input[type="month"]:focus,
+.darksea input[type="time"]:focus,
+.darksea input[type="week"]:focus,
+.darksea input[type="number"]:focus,
+.darksea input[type="email"]:focus,
+.darksea input[type="url"]:focus,
+.darksea input[type="search"]:focus,
+.darksea input[type="tel"]:focus,
+.darksea input[type="color"]:focus,
+.darksea .form-control:focus{
+    border: 2px solid #1ABC9C;
+    background:#FFF;
+}
+
+
+
+.darksea .btn-default:hover,.darksea .btn-default:active{
+	background:#FFF;
+	border-color:#1ABC9C !important;
+	color:#1ABC9C;
+}
+
+.darksea .btn-primary:hover,.darksea .btn-primary:active,.darksea .btn-primary:focus{
+	background:#FFF;
+	border-color:#FFF !important;
+	color:#1ABC9C;
+	outline:none;
+}
+
+
+.darksea .navbar-custom .nav li a {
+    border-top: 3px solid #1ABC9C;
+}
+
+.darksea .navbar-custom .nav li.active a {
+    color: #FFF;
+    border-top: 3px solid #FFF;
+}
+
+.darksea .section-heading h2 {
+    color: #1ABC9C;
+}
+
+.darksea .progress-bar {
+    background:#1ABC9C;
+}
+
+.darksea .facts-detail span {
+    color:#1ABC9C;
+}
+
+.darksea .service-box-icon {
+    color: #FFF;
+    background:#1ABC9C;
+}
+
+.darksea .portfolio-filters li {
+    border: 2px solid #1ABC9C;
+}
+
+.darksea .portfolio-filters li:hover{
+    background-color: #1ABC9C;
+    color:#fff;
+    border-color:#1ABC9C;
+}
+
+.darksea .portfolio-filters li.active{
+    background-color:#1ABC9C;
+    color:#fff;
+    border-color:#1ABC9C;
+}
+
+.darksea .image-overlay{
+    background: rgba(26,188,156,.6);
+}
+
+.darksea .cv-timeline-main:before {
+    background:#1ABC9C;
+}
+
+.darksea .cv-timeline-main > li .time-icon {
+    color: #1ABC9C;
+}
+
+.darksea .cv-timeline-main h4 {
+    color: #1ABC9C;
+}
+
+.darksea #testimonials .section-heading h2 {
+    color: #FFF;
+}
+
+.darksea #testimonials .owl-controls .owl-page.active span {
+    background: #1ABC9C;
+}
+
+.darksea .contact-address i {
+    border: 1px solid #1ABC9C;
+    color: #1ABC9C;
+}
+
+.darksea .scrollup {
+	background:rgba(26,188,156,.9);
+}
+
+.darksea .scrollup:hover{
+	background:rgba(26,188,156,.6);
+}
+
+.darksea footer {
+    background:#1ABC9C;
+}
+
+.darksea footer ul.footer-social li a:hover {
+    color: #1ABC9C;
+}
