@@ -1,0 +1,146 @@
+/*
+==================================================
+==================================================
+
+WINE SKIN
+
+==================================================
+==================================================
+*/
+
+.wine ::selection {
+	background:#9F2762;
+	color:#FFF;
+}
+
+.wine ::-moz-selection{
+	background:#9F2762;
+	color:#FFF;
+}
+
+.wine .navbar {
+    background-color: #9F2762;
+}
+
+.wine textarea:focus,
+.wine input[type="text"]:focus,
+.wine input[type="password"]:focus,
+.wine input[type="datetime"]:focus,
+.wine input[type="datetime-local"]:focus,
+.wine input[type="date"]:focus,
+.wine input[type="month"]:focus,
+.wine input[type="time"]:focus,
+.wine input[type="week"]:focus,
+.wine input[type="number"]:focus,
+.wine input[type="email"]:focus,
+.wine input[type="url"]:focus,
+.wine input[type="search"]:focus,
+.wine input[type="tel"]:focus,
+.wine input[type="color"]:focus,
+.wine .form-control:focus{
+    border: 2px solid #9F2762;
+    background:#FFF;
+}
+
+
+
+.wine .btn-default:hover,.wine .btn-default:active{
+	background:#FFF;
+	border-color:#9F2762 !important;
+	color:#9F2762;
+}
+
+.wine .btn-primary:hover,.wine .btn-primary:active,.wine .btn-primary:focus{
+	background:#FFF;
+	border-color:#FFF !important;
+	color:#9F2762;
+	outline:none;
+}
+
+
+.wine .navbar-custom .nav li a {
+    border-top: 3px solid #9F2762;
+}
+
+.wine .navbar-custom .nav li.active a {
+    color: #FFF;
+    border-top: 3px solid #FFF;
+}
+
+.wine .section-heading h2 {
+    color: #9F2762;
+}
+
+.wine .progress-bar {
+    background:#9F2762;
+}
+
+.wine .facts-detail span {
+    color:#9F2762;
+}
+
+.wine .service-box-icon {
+    color: #FFF;
+    background:#9F2762;
+}
+
+.wine .portfolio-filters li {
+    border: 2px solid #9F2762;
+}
+
+.wine .portfolio-filters li:hover{
+    background-color: #9F2762;
+    color:#fff;
+    border-color:#9F2762;
+}
+
+.wine .portfolio-filters li.active{
+    background-color:#9F2762;
+    color:#fff;
+    border-color:#9F2762;
+}
+
+.wine .image-overlay{
+    background: rgba(159,39,98,.6);
+}
+
+.wine .cv-timeline-main:before {
+    background:#9F2762;
+}
+
+.wine .cv-timeline-main > li .time-icon {
+    color: #9F2762;
+}
+
+.wine .cv-timeline-main h4 {
+    color: #9F2762;
+}
+
+.wine #testimonials .section-heading h2 {
+    color: #FFF;
+}
+
+.wine #testimonials .owl-controls .owl-page.active span {
+    background: #9F2762;
+}
+
+.wine .contact-address i {
+    border: 1px solid #9F2762;
+    color: #9F2762;
+}
+
+.wine .scrollup {
+	background:rgba(159,39,98,.9);
+}
+
+.wine .scrollup:hover{
+	background:rgba(159,39,98,.6);
+}
+
+.wine footer {
+    background:#9F2762;
+}
+
+.wine footer ul.footer-social li a:hover {
+    color: #9F2762;
+}

@@ -1,0 +1,145 @@
+/*
+==================================================
+==================================================
+
+ DEFAULT SKIN
+
+==================================================
+==================================================
+*/
+
+.default ::selection {
+	background:#E4545B;
+	color:#FFF;
+}
+
+.default ::-moz-selection{
+	background:#E4545B;
+	color:#FFF;
+}
+
+.default .navbar {
+    background-color: #E4545B;
+}
+
+.default textarea:focus,
+.default input[type="text"]:focus,
+.default input[type="password"]:focus,
+.default input[type="datetime"]:focus,
+.default input[type="datetime-local"]:focus,
+.default input[type="date"]:focus,
+.default input[type="month"]:focus,
+.default input[type="time"]:focus,
+.default input[type="week"]:focus,
+.default input[type="number"]:focus,
+.default input[type="email"]:focus,
+.default input[type="url"]:focus,
+.default input[type="search"]:focus,
+.default input[type="tel"]:focus,
+.default input[type="color"]:focus,
+.default .form-control:focus{
+    border: 2px solid #E4545B;
+    background:#FFF;
+}
+
+
+
+.default .btn-default:hover,.default .btn-default:active{
+	background:#FFF;
+	border-color:#E4545B !important;
+	color:#E4545B;
+}
+
+.default .btn-primary:hover,.default .btn-primary:active,.default .btn-primary:focus{
+	background:#FFF;
+	border-color:#FFF !important;
+	color:#E4545B;
+	outline:none;
+}
+
+
+.default .navbar-custom .nav li a {
+    border-top: 3px solid #E4545B;
+}
+
+.default .navbar-custom .nav li.active a {
+    color: #FFF;
+    border-top: 3px solid #FFF;
+}
+
+.default .section-heading h2 {
+    color: #E4545B;
+}
+
+.default .progress-bar {
+    background:#E4545B;
+}
+
+.default .facts-detail span {
+    color:#E4545B;
+}
+
+.default .service-box-icon {
+    color: #FFF;
+    background:#E4545B;
+}
+
+.default .portfolio-filters li {
+    border: 2px solid #E4545B;
+}
+
+.default .portfolio-filters li:hover{
+    background-color: #E4545B;
+    color:#fff;
+    border-color:#E4545B;
+}
+
+.default .portfolio-filters li.active{
+    background-color:#E4545B;
+    color:#fff;
+    border-color:#E4545B;
+}
+
+.default .image-overlay{
+    background: rgba(228,84,91,.6);
+}
+
+.default .cv-timeline-main:before {
+    background:#E4545B;
+}
+
+.default .cv-timeline-main > li .time-icon {
+    color: #E4545B;
+}
+
+.default .cv-timeline-main h4 {
+    color: #E4545B;
+}
+.default #testimonials .section-heading h2{
+    color:#FFF;
+}
+
+.default #testimonials .owl-controls .owl-page.active span {
+    background: #E4545B;
+}
+
+.default .contact-address i {
+    border: 1px solid #E4545B;
+    color: #E4545B;
+}
+
+.default .scrollup {
+	background:rgba(228,84,91,.9);
+}
+
+.default .scrollup:hover{
+	background:rgba(228,84,91,.6);
+}
+
+.default footer {
+    background:#E4545B;
+}
+
+.default footer ul.footer-social li a:hover {
+    color: #E4545B;
+}

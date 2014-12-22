@@ -1,0 +1,146 @@
+/*
+==================================================
+==================================================
+
+ORANGE SKIN
+
+==================================================
+==================================================
+*/
+
+.orange ::selection {
+	background:#FFB112;
+	color:#FFF;
+}
+
+.orange ::-moz-selection{
+	background:#FFB112;
+	color:#FFF;
+}
+
+.orange .navbar {
+    background-color: #FFB112;
+}
+
+.orange textarea:focus,
+.orange input[type="text"]:focus,
+.orange input[type="password"]:focus,
+.orange input[type="datetime"]:focus,
+.orange input[type="datetime-local"]:focus,
+.orange input[type="date"]:focus,
+.orange input[type="month"]:focus,
+.orange input[type="time"]:focus,
+.orange input[type="week"]:focus,
+.orange input[type="number"]:focus,
+.orange input[type="email"]:focus,
+.orange input[type="url"]:focus,
+.orange input[type="search"]:focus,
+.orange input[type="tel"]:focus,
+.orange input[type="color"]:focus,
+.orange .form-control:focus{
+    border: 2px solid #FFB112;
+    background:#FFF;
+}
+
+
+
+.orange .btn-default:hover,.orange .btn-default:active{
+	background:#FFF;
+	border-color:#FFB112 !important;
+	color:#FFB112;
+}
+
+.orange .btn-primary:hover,.orange .btn-primary:active,.orange .btn-primary:focus{
+	background:#FFF;
+	border-color:#FFF !important;
+	color:#FFB112;
+	outline:none;
+}
+
+
+.orange .navbar-custom .nav li a {
+    border-top: 3px solid #FFB112;
+}
+
+.orange .navbar-custom .nav li.active a {
+    color: #FFF;
+    border-top: 3px solid #FFF;
+}
+
+.orange .section-heading h2 {
+    color: #FFB112;
+}
+
+.orange .progress-bar {
+    background:#FFB112;
+}
+
+.orange .facts-detail span {
+    color:#FFB112;
+}
+
+.orange .service-box-icon {
+    color: #FFF;
+    background:#FFB112;
+}
+
+.orange .portfolio-filters li {
+    border: 2px solid #FFB112;
+}
+
+.orange .portfolio-filters li:hover{
+    background-color: #FFB112;
+    color:#fff;
+    border-color:#FFB112;
+}
+
+.orange .portfolio-filters li.active{
+    background-color:#FFB112;
+    color:#fff;
+    border-color:#FFB112;
+}
+
+.orange .image-overlay{
+    background: rgba(255,117,18,.6);
+}
+
+.orange .cv-timeline-main:before {
+    background:#FFB112;
+}
+
+.orange .cv-timeline-main > li .time-icon {
+    color: #FFB112;
+}
+
+.orange .cv-timeline-main h4 {
+    color: #FFB112;
+}
+
+.orange #testimonials .section-heading h2 {
+    color: #FFF;
+}
+
+.orange #testimonials .owl-controls .owl-page.active span {
+    background: #FFB112;
+}
+
+.orange .contact-address i {
+    border: 1px solid #FFB112;
+    color: #FFB112;
+}
+
+.orange .scrollup {
+	background:rgba(255,117,18,.9);
+}
+
+.orange .scrollup:hover{
+	background:rgba(255,117,18,.6);
+}
+
+.orange footer {
+    background:#FFB112;
+}
+
+.orange footer ul.footer-social li a:hover {
+    color: #FFB112;
+}

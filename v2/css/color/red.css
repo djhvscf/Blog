@@ -1,0 +1,150 @@
+/*
+==================================================
+==================================================
+
+RED SKIN
+
+==================================================
+==================================================
+*/
+
+.red ::selection {
+	background:#D1004E;
+	color:#FFF;
+}
+
+.red ::-moz-selection{
+	background:#D1004E;
+	color:#FFF;
+}
+
+.red .navbar {
+    background-color: #D1004E;
+}
+
+.red textarea:focus,
+.red input[type="text"]:focus,
+.red input[type="password"]:focus,
+.red input[type="datetime"]:focus,
+.red input[type="datetime-local"]:focus,
+.red input[type="date"]:focus,
+.red input[type="month"]:focus,
+.red input[type="time"]:focus,
+.red input[type="week"]:focus,
+.red input[type="number"]:focus,
+.red input[type="email"]:focus,
+.red input[type="url"]:focus,
+.red input[type="search"]:focus,
+.red input[type="tel"]:focus,
+.red input[type="color"]:focus,
+.red .form-control:focus{
+    border: 2px solid #D1004E;
+    background:#FFF;
+}
+
+
+
+.red .btn-default:hover,.red .btn-default:active{
+	background:#FFF;
+	border-color:#D1004E !important;
+	color:#D1004E;
+}
+
+.red .btn-primary:hover,.red .btn-primary:active,.red .btn-primary:focus{
+	background:#FFF;
+	border-color:#FFF !important;
+	color:#D1004E;
+	outline:none;
+}
+
+
+.red .navbar-custom .nav li a {
+    border-top: 3px solid #D1004E;
+}
+
+.red .navbar-custom .nav li.active a {
+    color: #FFF;
+    border-top: 3px solid #FFF;
+}
+
+.red .section-heading h2 {
+    color: #D1004E;
+}
+
+.red .progress-bar {
+    background:#D1004E;
+}
+
+.red .facts-detail span {
+    color:#D1004E;
+}
+
+.red .service-box-icon {
+    color: #FFF;
+    background:#D1004E;
+}
+
+.red .portfolio-filters li {
+    border: 2px solid #D1004E;
+}
+
+.red .portfolio-filters li:hover{
+    background-color: #D1004E;
+    color:#fff;
+    border-color:#D1004E;
+}
+
+.red .portfolio-filters li.active{
+    background-color:#D1004E;
+    color:#fff;
+    border-color:#D1004E;
+}
+
+.red .image-overlay{
+    background: rgba(209,0,78,.6);
+}
+
+.red .cv-timeline-main:before {
+    background:#D1004E;
+}
+
+.red .cv-timeline-main > li .time-icon {
+    color: #D1004E;
+}
+
+.red .cv-timeline-main h4 {
+    color: #D1004E;
+}
+
+.red #testimonials .section-heading h2{
+   color:#FFF;
+}
+
+.red #testimonials .section-heading h2 {
+    color: #FFF;
+}
+
+.red #testimonials .owl-controls .owl-page.active span {
+    background: #D1004E;
+}
+
+.red .contact-address i {
+    border: 1px solid #D1004E;
+    color: #D1004E;
+}
+
+.red .scrollup {
+	background:rgba(209,0,78,.9);
+}
+
+.red .scrollup:hover{
+	background:rgba(209,0,78,.6);
+}
+
+.red footer {
+    background:#D1004E;
+}
+
+.red footer ul.footer-social li a:hover {
+    color: #D1004E;
+}

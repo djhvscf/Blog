@@ -1,0 +1,146 @@
+/*
+==================================================
+==================================================
+
+YELLOW SKIN
+
+==================================================
+==================================================
+*/
+
+.yellow ::selection {
+	background:#E6CA17;
+	color:#FFF;
+}
+
+.yellow ::-moz-selection{
+	background:#E6CA17;
+	color:#FFF;
+}
+
+.yellow .navbar {
+    background-color: #E6CA17;
+}
+
+.yellow textarea:focus,
+.yellow input[type="text"]:focus,
+.yellow input[type="password"]:focus,
+.yellow input[type="datetime"]:focus,
+.yellow input[type="datetime-local"]:focus,
+.yellow input[type="date"]:focus,
+.yellow input[type="month"]:focus,
+.yellow input[type="time"]:focus,
+.yellow input[type="week"]:focus,
+.yellow input[type="number"]:focus,
+.yellow input[type="email"]:focus,
+.yellow input[type="url"]:focus,
+.yellow input[type="search"]:focus,
+.yellow input[type="tel"]:focus,
+.yellow input[type="color"]:focus,
+.yellow .form-control:focus{
+    border: 2px solid #E6CA17;
+    background:#FFF;
+}
+
+
+
+.yellow .btn-default:hover,.yellow .btn-default:active{
+	background:#FFF;
+	border-color:#E6CA17 !important;
+	color:#E6CA17;
+}
+
+.yellow .btn-primary:hover,.yellow .btn-primary:active,.yellow .btn-primary:focus{
+	background:#FFF;
+	border-color:#FFF !important;
+	color:#E6CA17;
+	outline:none;
+}
+
+
+.yellow .navbar-custom .nav li a {
+    border-top: 3px solid #E6CA17;
+}
+
+.yellow .navbar-custom .nav li.active a {
+    color: #FFF;
+    border-top: 3px solid #FFF;
+}
+
+.yellow .section-heading h2 {
+    color: #E6CA17;
+}
+
+.yellow .progress-bar {
+    background:#E6CA17;
+}
+
+.yellow .facts-detail span {
+    color:#E6CA17;
+}
+
+.yellow .service-box-icon {
+    color: #FFF;
+    background:#E6CA17;
+}
+
+.yellow .portfolio-filters li {
+    border: 2px solid #E6CA17;
+}
+
+.yellow .portfolio-filters li:hover{
+    background-color: #E6CA17;
+    color:#fff;
+    border-color:#E6CA17;
+}
+
+.yellow .portfolio-filters li.active{
+    background-color:#E6CA17;
+    color:#fff;
+    border-color:#E6CA17;
+}
+
+.yellow .image-overlay{
+    background: rgba(230,202,23,.6);
+}
+
+.yellow .cv-timeline-main:before {
+    background:#E6CA17;
+}
+
+.yellow .cv-timeline-main > li .time-icon {
+    color: #E6CA17;
+}
+
+.yellow .cv-timeline-main h4 {
+    color: #E6CA17;
+}
+
+.yellow #testimonials .section-heading h2 {
+    color: #FFF;
+}
+
+.yellow #testimonials .owl-controls .owl-page.active span {
+    background: #E6CA17;
+}
+
+.yellow .contact-address i {
+    border: 1px solid #E6CA17;
+    color: #E6CA17;
+}
+
+.yellow .scrollup {
+	background:rgba(230,202,23,.9);
+}
+
+.yellow .scrollup:hover{
+	background:rgba(230,202,23,.6);
+}
+
+.yellow footer {
+    background:#E6CA17;
+}
+
+.yellow footer ul.footer-social li a:hover {
+    color: #E6CA17;
+}

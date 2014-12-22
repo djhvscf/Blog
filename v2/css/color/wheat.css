@@ -1,0 +1,146 @@
+/*
+==================================================
+==================================================
+
+WHEAT SKIN
+
+==================================================
+==================================================
+*/
+
+.wheat ::selection {
+	background:#CDBA96;
+	color:#FFF;
+}
+
+.wheat ::-moz-selection{
+	background:#CDBA96;
+	color:#FFF;
+}
+
+.wheat .navbar {
+    background-color: #CDBA96;
+}
+
+.wheat textarea:focus,
+.wheat input[type="text"]:focus,
+.wheat input[type="password"]:focus,
+.wheat input[type="datetime"]:focus,
+.wheat input[type="datetime-local"]:focus,
+.wheat input[type="date"]:focus,
+.wheat input[type="month"]:focus,
+.wheat input[type="time"]:focus,
+.wheat input[type="week"]:focus,
+.wheat input[type="number"]:focus,
+.wheat input[type="email"]:focus,
+.wheat input[type="url"]:focus,
+.wheat input[type="search"]:focus,
+.wheat input[type="tel"]:focus,
+.wheat input[type="color"]:focus,
+.wheat .form-control:focus{
+    border: 2px solid #CDBA96;
+    background:#FFF;
+}
+
+
+
+.wheat .btn-default:hover,.wheat .btn-default:active{
+	background:#FFF;
+	border-color:#CDBA96 !important;
+	color:#CDBA96;
+}
+
+.wheat .btn-primary:hover,.wheat .btn-primary:active,.wheat .btn-primary:focus{
+	background:#FFF;
+	border-color:#FFF !important;
+	color:#CDBA96;
+	outline:none;
+}
+
+
+.wheat .navbar-custom .nav li a {
+    border-top: 3px solid #CDBA96;
+}
+
+.wheat .navbar-custom .nav li.active a {
+    color: #FFF;
+    border-top: 3px solid #FFF;
+}
+
+.wheat .section-heading h2 {
+    color: #CDBA96;
+}
+
+.wheat .progress-bar {
+    background:#CDBA96;
+}
+
+.wheat .facts-detail span {
+    color:#CDBA96;
+}
+
+.wheat .service-box-icon {
+    color: #FFF;
+    background:#CDBA96;
+}
+
+.wheat .portfolio-filters li {
+    border: 2px solid #CDBA96;
+}
+
+.wheat .portfolio-filters li:hover{
+    background-color: #CDBA96;
+    color:#fff;
+    border-color:#CDBA96;
+}
+
+.wheat .portfolio-filters li.active{
+    background-color:#CDBA96;
+    color:#fff;
+    border-color:#CDBA96;
+}
+
+.wheat .image-overlay{
+    background: rgba(205,186,105,.6);
+}
+
+.wheat .cv-timeline-main:before {
+    background:#CDBA96;
+}
+
+.wheat .cv-timeline-main > li .time-icon {
+    color: #CDBA96;
+}
+
+.wheat .cv-timeline-main h4 {
+    color: #CDBA96;
+}
+
+.wheat #testimonials .section-heading h2 {
+    color: #FFF;
+}
+
+.wheat #testimonials .owl-controls .owl-page.active span {
+    background: #CDBA96;
+}
+
+.wheat .contact-address i {
+    border: 1px solid #CDBA96;
+    color: #CDBA96;
+}
+
+.wheat .scrollup {
+	background:rgba(205,186,105,.9);
+}
+
+.wheat .scrollup:hover{
+	background:rgba(205,186,105,.6);
+}
+
+.wheat footer {
+    background:#CDBA96;
+}
+
+.wheat footer ul.footer-social li a:hover {
+    color: #CDBA96;
+}
