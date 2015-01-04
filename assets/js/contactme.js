@@ -45,6 +45,23 @@ $(document).ready(function() {
 							message: 'The subject can only consist of alphabetical and number'
 						}
 					}
+				},
+				content: {
+					message: 'The comments are required',
+					validators: {
+						notEmpty: {
+							message: 'The comments are required and cannot be empty'
+						},
+						stringLength: {
+							min: 1,
+							max: 500,
+							message: 'The comments must be more than 1 and less than 500 characters long'
+						},
+						regexp: {
+							regexp: /^[a-zA-Z0-9 ]+$/,
+							message: 'The comments can only consist of alphabetical and number'
+						}
+					}
 				}
 			}
         })
