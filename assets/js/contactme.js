@@ -86,7 +86,7 @@ $(document).ready(function() {
 					],
 				  'autotext': 'true',
 				  'subject': $('#subject').val(),
-				  'html':  $('#content').val() + 'sent it from my web site'
+				  'html':  $('#content').val() + ' *sent it from my web site*'
 				}
 			  };
 			  
