@@ -16,10 +16,15 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
+	<link href="assets/css/octicons.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/image.css">
 
     <script src="assets/js/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/hover.zoom.js"></script>
+	<script src="assets/js/handlebars.js"></script>
+	<script src="assets/js/jquery.ellipsis.js"></script>
+	<script src="assets/js/helper.js"></script>
+	<script src="assets/js/repos.js"></script>
+	<script src="assets/js/hover.zoom.js"></script>
     <script src="assets/js/hover.zoom.conf.js"></script>
 	
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -71,49 +76,10 @@
 	
 	<div class="container pt">
 		<div class="row mt centered">	
-			<div class="col-lg-4">
-				<a class="zoom red" href="projects/mariovsluigi.html"><img class="img-responsive" src="assets/img/portfolio/mario.jpg" alt="" style="height: 268px !important;" /></a>
-				<p>Mario vs Luigi</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom red" href="projects/sispro.html"><img class="img-responsive" src="assets/img/portfolio/sispro.png" alt="" style="height: 268px !important;" /></a>
-				<p>SISPRO</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom red" href="projects/cenfoforum.html"><img class="img-responsive" src="assets/img/portfolio/cenfoForum.png" alt="" style="height: 268px !important;" /></a>
-				<p>CenfoForum</p>
-			</div>
-		</div><!-- /row -->
-		<div class="row mt centered">	
-			<div class="col-lg-4">
-				<a class="zoom red" href="projects/imdb.html"><img class="img-responsive" src="assets/img/portfolio/imdb.PNG" alt="" style="height: 268px !important;" /></a>
-				<p>IMDb</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom red" href="experiments/2014/10/valid.html"><img class="img-responsive" src="assets/img/portfolio/jvalid.png" alt="" style="height: 268px !important;"  /></a>
-				<p>jValid</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom red" href="projects/hangman.html"><img class="img-responsive" src="assets/img/portfolio/hangman1.PNG" alt="" style="height: 268px !important;"  /></a>
-				<p>Hang man</p>
-			</div>
-		</div><!-- /row -->
-		<div class="row mt centered">	
-			<div class="col-lg-4">
-				<a class="zoom red" href="experiments/2014/10/stringcaser.html"><img class="img-responsive" src="assets/img/portfolio/stringcaser.png" alt="" style="height: 268px !important;" /></a>
-				<p>StringCaser</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom red" href="experiments/2014/10/flatjson.html"><img class="img-responsive" src="assets/img/portfolio/flatjson.png" alt="" style="height: 268px !important;"  /></a>
-				<p>flatJSON</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom red" href="experiments/2014/12/jFont.html"><img class="img-responsive" src="assets/img/portfolio/jFont.png" alt="" style="height: 268px !important;"  /></a>
-				<p>jFont</p>
-			</div>
+			<div id="info"></div>
+			<div id="list">Loading...</div>
 		</div><!-- /row -->
 	</div><!-- /container -->
-	
 	
 	<!-- +++++ Footer Section +++++ -->
 	
@@ -157,6 +123,44 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+	<script id="list-template" type="text/x-handlebars-template">
+		{{#each repos}}
+		<div class="col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a href="https://github.com/{{full_name}}" target="_blank">{{plusOne @index}}. {{name}}</a>
+				</div>
+				<div class="panel-body">
+					<div class="stars-forks">
+						<div class="btn-group btn-group-sm">
+							<a class="btn btn-default" href="https://github.com/{{full_name}}" target="_blank">
+								<span class="octicon octicon-star"></span>
+								Star
+							</a>
+							<a class="btn btn-default" href="https://github.com/{{full_name}}/stargazers" target="_blank">
+								{{stargazers_count}}
+							</a>
+						</div>
+						<div class="btn-group btn-group-sm">
+							<a class="btn btn-default" href="https://github.com/{{full_name}}/fork" target="_blank">
+								<span class="octicon octicon-repo-forked"></span>
+								Fork
+							</a>
+							<a class="btn btn-default" href="https://github.com/{{full_name}}/network" target="_blank">
+								{{forks_count}}
+							</a>
+						</div>
+					</div>
+					{{#if homepage}}
+					<a href="{{homepage}}" class="ellipsis" title="{{description}}">{{description}}</a>
+					{{else}}
+					<span class="ellipsis" title="{{description}}">{{description}}</span>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+		{{/each}}
+	</script>
     <script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery.scrollUp.js"></script>
 	<script>
