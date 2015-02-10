@@ -304,3 +304,7 @@ height: 100%;
 .demoh4  {
 	font-size: 15px;
 }
+
+.panel-body {
+	height: 120px;
+}
