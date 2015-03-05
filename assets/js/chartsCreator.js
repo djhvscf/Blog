@@ -15,7 +15,7 @@ function createLanguageChart()
 				},
 				{
 					name: 'VB',
-					data: [80],
+					data: [90],
 					//color:
 				},
 				{
@@ -44,7 +44,7 @@ function createLanguageChart()
 					//color:
 				},
 				{
-					name: 'Javascript, jQuery, Ajax',
+					name: 'Javascript',
 					data: [99],
 					//color:
 				},
@@ -69,9 +69,9 @@ function createDatabaseChart()
 			{
 				name: 'Database',
 				data: [
-					['MySQL',   90],
-					['SQL Server 2008 R2 / 2012', 95],
-					['Oracle 11g',    80],
+					['MySQL', 90],
+					['SQL Server 2008 R2 / 2012 / 2014', 95],
+					['Oracle 11g', 80],
 				]
 			}
 		]
@@ -117,6 +117,11 @@ function createVersionChart()
 						name: 'VisualSVN',
 						data: [40],
 						//color:
+					},
+					{
+						name: 'TFS',
+						data: [60],
+						//color:
 					}
 				];
 	createChart('#version', 'column', 'Knowledge in Version Control System', '', categories, '', '', series);
@@ -124,12 +129,20 @@ function createVersionChart()
 
 function createIDEChart()
 {
-	var categories =  ['FlashDevelop', 'Eclipse', 'Visual Studio (2010/2012)', 'Netbeans', 'jCreator', 'Android Studio v0.8.6', 'Spring Tool Suite'];
+	var categories =  ['FlashDevelop', 
+						'Eclipse', 
+						'Visual Studio (2008/2010/2012)', 
+						'Netbeans', 
+						'jCreator', 
+						'Android Studio v0.8.6', 
+						'Spring Tool Suite',
+						'SQL Server Studio (2008/2012/2014)',
+						'WebStorm'];
 	var series =  
 				[
 					{
 						name: 'Knowledge in IDEs',
-						data: [80, 90,100,85,100,95, 100],
+						data: [80, 90,100,85,100,95, 100, 80, 70],
 						color: '#1abc9c',
 					}
 				];
@@ -203,6 +216,10 @@ function createTechChart()
 					{
 						name: 'Windows Presentation Foundation (WPF)',
 						data: [40]
+					},
+					{
+						name: 'jQuery, Ajax',
+						data: [95]
 					}
 				];
 	createChart('#tech', 'column', 'Knowledge in technologies', '', categories, '', '', series);
@@ -245,4 +262,4 @@ function createPersonalChart()
 					}
 				];
 	createChart('#personal', 'column', 'Personal Skills', '', categories, '', '', series);
-}
+};
