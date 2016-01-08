@@ -34,13 +34,13 @@ function createLanguageChart()
 					//color:
 				},
 				{
-					name: 'Assembly',
-					data: [10],
+					name: 'HTML, XML, CSS',
+					data: [99],
 					//color:
 				},
 				{
-					name: 'HTML, XML, CSS',
-					data: [99],
+					name: 'Assembly',
+					data: [10],
 					//color:
 				},
 				{
@@ -54,6 +54,10 @@ function createLanguageChart()
 					//color:
 				},
 				{
+					name: 'Python',
+					data: [20]
+					//color:
+				},{
 					name: 'Android',
 					data: [90]
 					//color:
@@ -69,7 +73,7 @@ function createDatabaseChart()
 			{
 				name: 'Database',
 				data: [
-					['MySQL', 90],
+					['MySQL', 85],
 					['SQL Server 2008 R2 / 2012 / 2014', 95],
 					['Oracle 11g', 80],
 				]
@@ -142,7 +146,7 @@ function createIDEChart()
 				[
 					{
 						name: 'Knowledge in IDEs',
-						data: [80, 90,100,85,100,95, 100, 80, 70],
+						data: [80, 90,100,85,100,95, 100, 80, 85],
 						color: '#1abc9c',
 					}
 				];
@@ -196,6 +200,11 @@ function createTechChart()
 					},
 					{
 						name: 'DevExpress',
+						data: [95],
+						//color:
+					},
+					{
+						name: 'DevExtreme',
 						data: [95],
 						//color:
 					},
