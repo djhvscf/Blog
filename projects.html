@@ -16,10 +16,17 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
+	<link href="assets/css/octicons.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/image.css">
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-
+    <script src="assets/js/jquery-1.10.2.min.js"></script>
+	<script src="assets/js/handlebars.js"></script>
+	<script src="assets/js/jquery.ellipsis.js"></script>
+	<script src="assets/js/helper.js"></script>
+	<script src="assets/js/repos.js"></script>
+	<script src="assets/js/hover.zoom.js"></script>
+    <script src="assets/js/hover.zoom.conf.js"></script>
+	
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -29,7 +36,7 @@
 
   <body>
 
-    <!-- Static navbar -->
+  <!-- Static navbar -->
     <div class="navbar navbar-inverse navbar-static-top">
       <div class="container">
         <div class="navbar-header">
@@ -38,13 +45,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Dennis Hernández </a>
+          <a class="navbar-brand" href="index.html">Dennis Hernández</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="index.html">Home</a></li>
 			<li><a href="blog.html">Blog</a></li>
-			<li><a href="about.html">About</a></li>
+			<li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -57,71 +64,20 @@
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2 centered">
 					<img src="assets/img/user.png" class="userImgBig userImg" alt="Dennis Hernández">
-					<h1>Hi, I am Dennis Hernández!</h1>
-					<p>I was born on November 4th, 1992.
-						I'm a Software Engineering, I work as a solutions developer for a company focused on manufactoring solutions.
-						I enjoy cooking, swimming, roller skating and reading technological news.
-						I like database and web design, also I like project management and I have a certain attraction to the field of education. 
-						I work with agile methodologies and I enjoy teamwork</p>
+					<h1>These are my projects and experiments on GitHub</h1>
+					<p>Here you can see what I'm working on or what I'm contributing to</p>
 				</div><!-- /col-lg-8 -->
 			</div><!-- /row -->
 	    </div> <!-- /container -->
 	</div><!-- /ww -->
 	
 	
-	<!-- +++++ Information Section +++++ -->
+	<!-- +++++ Projects Section +++++ -->
 	
 	<div class="container pt">
 		<div class="row mt centered">	
-			<div class="col-lg-3">
-				<span class="glyphicon glyphicon-file"></span>
-				<p>You can see my CV <a href="https://drive.google.com/open?id=0B0VokOTJJG_lMGp6UmRZOG5rZ2s" target="_blank">here </a> and also you can see my Microsoft Virtual Academy account
-				<a href="http://www.microsoftvirtualacademy.com/Profile.aspx?alias=1223559" target="_blank">here </a> 
-				</p>
-			</div>
-			
-			<div class="col-lg-3">
-				<span class="glyphicon glyphicon-book"></span>
-				<p>Studying Software Engineering at <a href="http://www.ucenfotec.ac.cr/" target="_blank">UCenfotec. </a></p>
-			</div>
-			
-			<div class="col-lg-3">
-				<span class="glyphicon glyphicon-user"></span>
-				<p>I like the web design, the user experience, the quality in software, teamwork.</p>
-			</div>
-
-			<div class="col-lg-3">
-				<span class="glyphicon glyphicon-fire"></span>
-				<p>I love to learn many many programming languages and agile methodologies. You can see my GitHub activity <a href="githubactivity.html" target="_self">here</a> and also you can see my GitHub repositories <a href="https://github.com/djhvscf" target="_blank">here</a>.</p>
-			</div>
-		</div><!-- /row -->
-		
-		<div class="row mt">
-			<h4 style="text-align: center;">MY SKILLS</h4>
-			<div class="col-lg-6">
-				<div id="personal" style="min-width: 310px; max-width: 100%; height: 400px; margin: 0 auto"></div>
-			</div><!-- /col-lg-6 -->
-			
-			<div class="col-lg-6">
-				<div id="language" style="min-width: 310px; max-width: 100%; height: 400px; margin: 0 auto"></div>
-			</div><!-- /col-lg-6 -->
-			
-			<div class="col-lg-6">
-				<div id="database" style="min-width: 310px; max-width: 100%; height: 400px; margin: 0 auto"></div>
-			</div><!-- /col-lg-6 -->
-			
-			<div class="col-lg-6">
-				<div id="version" style="min-width: 310px; max-width: 100%; height: 400px; margin: 0 auto"></div>
-			</div><!-- /col-lg-6 -->
-			
-			<div class="col-lg-6">
-				<div id="ide" style="min-width: 310px; max-width: 100%; height: 400px; margin: 0 auto"></div>
-			</div><!-- /col-lg-6 -->
-			
-			<div class="col-lg-6">
-				<div id="tech" style="min-width: 310px; max-width: 100%; height: 400px; margin: 0 auto"></div>
-			</div><!-- /col-lg-6 -->
-			
+			<div id="info"></div>
+			<div id="list">Loading...</div>
 		</div><!-- /row -->
 	</div><!-- /container -->
 	
@@ -152,10 +108,14 @@
 				<div class="col-lg-4">
 					<h4></h4>
 					<p></p>
-				</div><!-- /col-lg-4 -->
+			</div><!-- /col-lg-4 -->
 			
 			</div>
 		
+		</div>
+		<br>
+		<div class="divCounter">
+			<script type="text/javascript" src="http://counter1.statcounterfree.com/private/countertab.js?c=b04de0a4d1a4c048c78604c801ddf1d5"></script>
 		</div>
 	</div>
 	
@@ -163,20 +123,48 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+	<script id="list-template" type="text/x-handlebars-template">
+		{{#each repos}}
+		<div class="col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a href="https://github.com/{{full_name}}" target="_blank">{{plusOne @index}}. {{name}}</a>
+				</div>
+				<div class="panel-body">
+					<div class="stars-forks">
+						<div class="btn-group btn-group-sm">
+							<a class="btn btn-default" href="https://github.com/{{full_name}}" target="_blank">
+								<span class="octicon octicon-star"></span>
+								Star
+							</a>
+							<a class="btn btn-default" href="https://github.com/{{full_name}}/stargazers" target="_blank">
+								{{stargazers_count}}
+							</a>
+						</div>
+						<div class="btn-group btn-group-sm">
+							<a class="btn btn-default" href="https://github.com/{{full_name}}/fork" target="_blank">
+								<span class="octicon octicon-repo-forked"></span>
+								Fork
+							</a>
+							<a class="btn btn-default" href="https://github.com/{{full_name}}/network" target="_blank">
+								{{forks_count}}
+							</a>
+						</div>
+					</div>
+					{{#if homepage}}
+					<a href="{{homepage}}" class="ellipsis" title="{{description}}" target="_blank">{{description}}</a>
+					{{else}}
+					<span class="ellipsis" title="{{description}}">{{description}}</span>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+		{{/each}}
+	</script>
     <script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/highcharts.js"></script>
-	<script src="assets/js/exporting.js"></script>
-	<script src="assets/js/chartsBuilder.js"></script>	
-	<script src="assets/js/chartsCreator.js"></script>
 	<script src="assets/js/jquery.scrollUp.js"></script>
 	<script>
 		$(function () {
-			createLanguageChart();
-			createDatabaseChart();
-			createVersionChart();
-			createIDEChart();
-			createTechChart();
-			createPersonalChart();
 			$.scrollUp({
 				animation: 'fade',
 				activeOverlay: 'transparent',
