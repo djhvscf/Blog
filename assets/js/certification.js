@@ -7,7 +7,8 @@ var sprintf = $.fn.bootstrapTable.utils.sprintf,
 			certifiedBy: 'Cisco Academy',
 			certifiedByUrl: 'http://www.cisco.com/',
 			certifiedOn: 'August 2015',
-			info: ''
+			moreInfo: 'Course information',
+			moreInfoUrl: 'https://www.netacad.com/courses/ccna/'
 		},
 		{
 			certification: 'Scrum Master Certified',
@@ -15,7 +16,17 @@ var sprintf = $.fn.bootstrapTable.utils.sprintf,
 			certifiedBy: 'ScrumStudy',
 			certifiedByUrl: 'http://www.scrumstudy.com/',
 			certifiedOn: '-',
-			info: ''
+			moreInfo: 'Course information',
+			moreInfoUrl: 'http://www.scrumstudy.com/scrum-master-certification.asp'
+		},
+		{
+			certification: 'Full stack web development certification',
+			status: 'In Progress',
+			certifiedBy: 'Coursera',
+			certifiedByUrl: 'https://www.coursera.org/',
+			certifiedOn: '-',
+			moreInfo: 'Course information',
+			moreInfoUrl: 'https://www.coursera.org/specializations/full-stack'
 		}
 	];
 
@@ -46,4 +57,8 @@ var getStatus = function (value, row, i) {
 	}
 	
 	return sprintf('<div style="background-color: %s">%s</div>', color, value);
-}
+};
+
+var getInfo = function (value, row, i) {
+	return '<a href="'+ row.moreInfoUrl + '" target=_"blank">'+ value + '</a>';
+};
