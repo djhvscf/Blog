@@ -1,6 +1,6 @@
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
- * version: 1.9.1
+ * version: 1.10.0
  * https://github.com/wenzhixin/bootstrap-table/
  */
 
@@ -624,7 +624,7 @@
         });
 
         // if options.data is setting, do not process tbody data
-        if (this.options.data) {
+        if (this.options.data.length) {
             return;
         }
 
@@ -1775,7 +1775,7 @@
     BootstrapTable.prototype.initServer = function (silent, query) {
         var that = this,
             data = {},
-            params = {                
+            params = {
                 searchText: this.searchText,
                 sortName: this.options.sortName,
                 sortOrder: this.options.sortOrder
@@ -2403,6 +2403,10 @@
             return;
         }
         this.data[params.index][params.field] = params.value;
+
+        if (params.reinit === false) {
+            return;
+        }
         this.initSort();
         this.initBody(true);
     };

@@ -27,6 +27,15 @@ var sprintf = $.fn.bootstrapTable.utils.sprintf,
 			certifiedOn: '-',
 			moreInfo: 'Course information',
 			moreInfoUrl: 'https://www.coursera.org/specializations/full-stack'
+		},
+		{
+			certification: 'Basic Android',
+			status: 'Certified',
+			certifiedBy: 'Universidad Cenfotec',
+			certifiedByUrl: 'https://www.ucenfotec.ac.cr/',
+			certifiedOn: 'October 2013',
+			moreInfo: 'Course information (Spanish)',
+			moreInfoUrl: 'https://drive.google.com/file/d/0B0VokOTJJG_lVGFad1JFbGhZWW8/view?usp=sharing'
 		}
 	];
 

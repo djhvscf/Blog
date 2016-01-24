@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../../assets/img/favicon.ico">
+
+    <title>Dennis Hernández </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../assets/css/bootstrap.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="../../../assets/css/main.css" rel="stylesheet">
+	<link href="../../../assets/css/shCore.css" rel="stylesheet">
+	<link href="../../../assets/css/shCoreDefault.css" rel="stylesheet">
+
+    <script src="../../../assets/js/jquery-1.10.2.min.js"></script>
+    <script src="../../../assets/js/hover.zoom.js"></script>
+    <script src="../../../assets/js/hover.zoom.conf.js"></script>
+	<script src="../../../assets/js/shCore.js"></script>
+	<script src="../../../assets/js/shBrushCSharp.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html">Dennis Hernández </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../../../index.html">Home</a></li>
+			<li><a href="../../../blog.html">Blog</a></li>
+			<li><a href="../../../projects.html">Projects</a></li>
+			<li><a href="../../../certification.html">Certifications</a></li>
+            <li><a href="../../../contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	
+	<!-- +++++ Post +++++ -->
+	<div id="white">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<p><img src="../../../assets/img/user.png" class="userImgLittle userImg"> <ba>Dennis Hernández</ba></p>
+					<p><bd>January 22, 2016</bd></p>
+					<h4>15 Cool New Features in C# 6.0</h4>
+					<p>Here is the <b>15</b> cool new features in C# 6.0 According to Roslyn some features are planned and might be available in the future.</p>
+					
+					<h5>1- Auto-Property Initializers</h5>
+					
+					In early version of C# if we want to set a default value for a property in a class, we do this in the constructor. 
+					In C# 6.0 using Auto-property initializers we can assign a default value for a property as part of the 
+					property declaration itself.
+					
+					<h6>Old Way</h6>
+					
+					<pre class="brush: c-sharp">
+					class Program
+					{
+						public Program()
+						{
+							MyProperty = 10;
+						}
+
+						public int MyProperty { get; set; }
+					}
+					</pre>
+					
+					<h6>New Way</h6>
+					
+					<pre class="brush: c-sharp">
+					class Program
+					{
+						public int MyProperty { get; set; } = 10
+					}
+					</pre>
+					
+					<h5>2- Using static</h5>
+					
+					With static members you don't need an instance of an object to invoke a method, you just use the typename, a dot, 
+					a static method name, and apply parentheses and parameters. 
+					This feature allows us to access the static methods inside a class directly without speifying its class name. 
+					Usually we ue Convert.ToInt32 to convert a value to integer. 
+					But using this feature we can just use ToInt32 to convert.
+
+					<h6>Old Way</h6>
+					
+					<pre class="brush: c-sharp">
+					namespace TestApp
+					{
+						class Program
+						{
+							static void Main(string[] args)
+							{
+								var value = Convert.ToInt32("2015");
+							}
+						}
+					}
+					</pre>
+					
+					<h6>New Way</h6>
+					
+					<pre class="brush: c-sharp">
+					using Convert;
+ 
+					namespace TestApp
+					{
+						class Program
+						{
+							static void Main(string[] args)
+							{
+								var value = ToInt32("2015");
+							}
+						}
+					}
+					</pre>
+					
+					<h5>3- Dictionary Initializers</h5>
+					
+					Ever since C# version 3 came around, we've had the ability to initialize collections like lists and 
+					dictionaries using the key value pairs are surrounded with curly braces. 
+					With C# 6.0 we can achieve the same result, using key value inside of square 
+					brackets and a sign of value using an equal sign.
+					
+					<h6>Old Way</h6>
+					
+					<pre class="brush: c-sharp">
+					Dictionary dict = new Dictionary<int, string>
+					{
+						{1, "Apple" },
+						{2, "Microsoft" },
+						{3, "IBM" }
+					};
+					</pre>
+					
+					<h6>New Way</h6>
+					
+					<pre class="brush: c-sharp">
+					Dictionary dict = new Dictionary<int, string>
+					{
+						[1] = "Apple",
+						[2] = "Microsoft",
+						[3] = "IBM" 
+					};
+					</pre>
+					
+					<h5>4- Getter-only auto-properties</h5>
+					
+					When we use auto implemented properties in old vesion of c#, we must provide both get and set. 
+					If you want the property value should not be set, you can use the private accessor on the setter, 
+					With C# 6.0, you can now omit the set accessor to achieve true readonly auto implemented properties:
+					
+					<h6>Old Way</h6>
+					
+					<pre class="brush: c-sharp">
+					public int MyProperty { get; private set; }
+					</pre>
+					
+					<h6>New Way</h6>
+					
+					<pre class="brush: c-sharp">
+					public int MyProperty { get; }
+					</pre>
+					
+					<h5>5- Null-conditional operators (?.)</h5>
+					
+					This is one of the cool feature in c# 6.0. 
+					Usually we use if condition before using it to execution. 
+					But using this feature we can check the value is null or not in a single line and proceed the execution if it is not null. 
+					It help us to avoid the NullReferenceException.
+					
+					<h6>Old Way</h6>
+					
+					<pre class="brush: c-sharp">
+					public string Truncate(string value, int length)
+					{
+						string result = value;
+						if (value != null)
+						{
+							result = value.Substring(0, value.Length - 1);
+						}
+					 
+						return result;
+					}
+					</pre>
+					
+					<h6>New Way</h6>
+					
+					<pre class="brush: c-sharp">
+					public string Truncate(string value, int length)
+					{          
+						return value?.Substring(0, value.Length - 1);
+					}
+					</pre>
+					
+					</p>
+					<br>
+					<p><bt>TAGS: <a href="#">C#</a> - <a href="#">C# 6.0</a> - <a href="#">.NET</a>- <a href="#">Microsoft</a></bt></p>
+					<hr>
+					<p><a href="../../../blog.html"># Back</a></p>
+				</div>
+
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /white -->
+	
+	
+	
+	
+	<!-- +++++ Footer Section +++++ -->
+	
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h4>My Bunker</h4>
+					<p>
+						San José, Costa Rica<br/>
+						<a href="mailto:djhv92@hotmail.com">djhv92@hotmail.com </a><br/>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>More info:</h4>
+					<p>
+						Curriculum Vitae <a href="https://goo.gl/z2g2br" target="_blank">(EN)</a> - <a href="https://goo.gl/D2F0Dy" target="_blank">(ES)</a><br/>				
+						<a href="https://www.linkedin.com/in/dennishernandezv" target="_blank">LinkedIn</a><br/>
+						<a href="https://github.com/djhvscf" target="_blank">Github</a><br/>
+						<a href="https://twitter.com/djhvs" target="_blank">Twitter</a><br/>
+						<a href="https://www.facebook.com/dennis.hernandezvargas" target="_blank">Facebook</a>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4></h4>
+					<p></p>
+				</div><!-- /col-lg-4 -->
+			
+			</div>
+		
+		</div>
+	</div>
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+  </body>
+</html>
