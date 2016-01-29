@@ -8,25 +8,31 @@ var sprintf = $.fn.bootstrapTable.utils.sprintf,
 			certifiedByUrl: 'http://www.cisco.com/',
 			certifiedOn: 'August 2015',
 			moreInfo: 'Course information',
-			moreInfoUrl: 'https://www.netacad.com/courses/ccna/'
+			moreInfoUrl: 'https://www.netacad.com/courses/ccna/',
+			certificate: 'Certificate',
+			certificateUrl: ''
 		},
 		{
 			certification: 'Scrum Master Certified',
 			status: 'In Progress',
 			certifiedBy: 'ScrumStudy',
 			certifiedByUrl: 'http://www.scrumstudy.com/',
-			certifiedOn: '-',
+			certifiedOn: '',
 			moreInfo: 'Course information',
-			moreInfoUrl: 'http://www.scrumstudy.com/scrum-master-certification.asp'
+			moreInfoUrl: 'http://www.scrumstudy.com/scrum-master-certification.asp',
+			certificate: 'Certificate',
+			certificateUrl: ''
 		},
 		{
 			certification: 'Full stack web development certification',
 			status: 'In Progress',
 			certifiedBy: 'Coursera',
 			certifiedByUrl: 'https://www.coursera.org/',
-			certifiedOn: '-',
+			certifiedOn: '',
 			moreInfo: 'Course information',
-			moreInfoUrl: 'https://www.coursera.org/specializations/full-stack'
+			moreInfoUrl: 'https://www.coursera.org/specializations/full-stack',
+			certificate: 'Certificate',
+			certificateUrl: ''
 		},
 		{
 			certification: 'Basic Android',
@@ -35,8 +41,21 @@ var sprintf = $.fn.bootstrapTable.utils.sprintf,
 			certifiedByUrl: 'https://www.ucenfotec.ac.cr/',
 			certifiedOn: 'October 2013',
 			moreInfo: 'Course information (Spanish)',
-			moreInfoUrl: 'https://drive.google.com/file/d/0B0VokOTJJG_lVGFad1JFbGhZWW8/view?usp=sharing'
-		}
+			moreInfoUrl: 'https://drive.google.com/file/d/0B0VokOTJJG_lVGFad1JFbGhZWW8/view?usp=sharing',
+			certificate: 'Certificate',
+			certificateUrl: ''
+		},
+		{
+			certification: 'Scrum Fundamentals Certified',
+			status: 'Certified',
+			certifiedBy: 'ScrumStudy',
+			certifiedByUrl: 'http://www.scrumstudy.com/',
+			certifiedOn: 'January 2016',
+			moreInfo: 'Course information',
+			moreInfoUrl: 'http://www.scrumstudy.com/Scrum-Fundamentals-Certified.asp',
+			certificate: 'Certificate',
+			certificateUrl: 'https://drive.google.com/file/d/0B0VokOTJJG_lMnZ4Wll5cjBhYWM/view?usp=sharing'
+		},
 	];
 
 $(function () {
@@ -70,4 +89,12 @@ var getStatus = function (value, row, i) {
 
 var getInfo = function (value, row, i) {
 	return '<a href="'+ row.moreInfoUrl + '" target=_"blank">'+ value + '</a>';
+};
+
+var getCertificate = function (value, row, i) {
+	if (row.certificateUrl !== '') {
+		return '<a href="'+ row.certificateUrl + '" target=_"blank">'+ value + '</a>';
+	} else {
+		return '';
+	}
 };
