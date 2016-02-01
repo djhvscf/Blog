@@ -109,7 +109,7 @@ var resetForm = function(needReset) {
 	}
 	$('#contactme :input').each(function() {
 		if(this.type !== 'submit' && this.type !== 'button' && this.type !== 'textarea') {
-			$('#contactme').bootstrapValidator('enableFieldValidators', this.name, false).bootstrapValidator('enableFieldValidators', this.name, true)
+			$('#contactme').bootstrapValidator('enableFieldValidators', this.id, false).bootstrapValidator('enableFieldValidators', this.id, true)
 		}
 	});
 	
