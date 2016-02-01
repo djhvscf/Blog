@@ -601,6 +601,10 @@ html[xmlns] .slides {
 	text-align:center;
 }
 
+.more-info {
+	color: #222222;
+}
+
 .header-main h2{
 	font-size: 70px;
 	font-weight:700;
