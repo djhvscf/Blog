@@ -592,6 +592,9 @@ html[xmlns] .slides {
     background: url(../images/slider/slide6.gif) center center;
 }
 
+.help-block {
+	margin-top: -13px;
+}
 
 .header-main{
 	padding:100px 0;
