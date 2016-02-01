@@ -381,16 +381,16 @@
 					 <form role="form" action="https://mandrillapp.com/api/1.0/messages/send.json" id="contactme">
                         <div class="row">
                             <div class="col-md-6">
-                                <input class="form-control" id="name" placeholder="Full Name" type="text">
+                                <input class="form-control" id="name" name="name" placeholder="Full Name" type="text">
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control" id="email" placeholder="Your Email" type="email">
+                                <input class="form-control" id="email" name="email" placeholder="Your Email" type="email">
                             </div>
                             <div class="col-md-12">
-                                <input class="form-control" id="subject" placeholder="Subject" type="text">
+                                <input class="form-control" id="subject" name="subject" placeholder="Subject" type="text">
                             </div>
                             <div class="col-md-12">
-                                <textarea class="form-control" id="content" rows="7" placeholder="Your Message"></textarea>
+                                <textarea class="form-control" id="content" name="content" rows="7" placeholder="Your Message"></textarea>
                             </div>
                             <div class="col-md-12 text-right">
                                 <button type="submit" id="submitcontactme" class="btn btn-default btn-lg">Send Message <i class="ion-paper-airplane"></i></button>
