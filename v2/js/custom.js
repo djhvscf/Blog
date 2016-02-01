@@ -23,10 +23,10 @@
  
     $(window).load(function() {
     $('.homeslider').flexslider({
-          animation: "fade", 
-		  controlNav: false,
-        directionNav: true,
-		  slideshowSpeed:6000,
+        animation: "fade", 
+		controlNav: false,
+		directionNav: true,
+		slideshowSpeed:12000,
     });
   });
   
@@ -44,10 +44,17 @@
 			Mixitup portfolio
  =============================================== */
     
-	   jQuery('#grid').mixitup({
-		targetSelector: '.mix',
-		});
-
+	   setTimeout(function () {
+		   jQuery('#list').mixItUp({
+				load: {
+					filter: '.Javascript'
+				},
+				controls: {
+					live: true
+				}
+			});
+			$('#list').mixItUp('filter', '.JavaScript');
+	   }, 2000);
 
 	
 /* ==============================================

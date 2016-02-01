@@ -9,17 +9,17 @@
 */
 
 .default ::selection {
-	background:#E4545B;
+	background:#4DA6FF;
 	color:#FFF;
 }
 
 .default ::-moz-selection{
-	background:#E4545B;
+	background:#4DA6FF;
 	color:#FFF;
 }
 
 .default .navbar {
-    background-color: #E4545B;
+    background-color: #4DA6FF;
 }
 
 .default textarea:focus,
@@ -38,7 +38,7 @@
 .default input[type="tel"]:focus,
 .default input[type="color"]:focus,
 .default .form-control:focus{
-    border: 2px solid #E4545B;
+    border: 2px solid #4DA6FF;
     background:#FFF;
 }
 
@@ -46,20 +46,20 @@
 
 .default .btn-default:hover,.default .btn-default:active{
 	background:#FFF;
-	border-color:#E4545B !important;
-	color:#E4545B;
+	border-color:#4DA6FF !important;
+	color:#4DA6FF;
 }
 
 .default .btn-primary:hover,.default .btn-primary:active,.default .btn-primary:focus{
 	background:#FFF;
 	border-color:#FFF !important;
-	color:#E4545B;
+	color:#4DA6FF;
 	outline:none;
 }
 
 
 .default .navbar-custom .nav li a {
-    border-top: 3px solid #E4545B;
+    border-top: 3px solid #4DA6FF;
 }
 
 .default .navbar-custom .nav li.active a {
@@ -68,78 +68,82 @@
 }
 
 .default .section-heading h2 {
-    color: #E4545B;
+    color: #222222;
 }
 
 .default .progress-bar {
-    background:#E4545B;
+    background:#4DA6FF;
 }
 
 .default .facts-detail span {
-    color:#E4545B;
+    color:#4DA6FF;
 }
 
 .default .service-box-icon {
     color: #FFF;
-    background:#E4545B;
+    background:#4DA6FF;
 }
 
 .default .portfolio-filters li {
-    border: 2px solid #E4545B;
+    border: 2px solid #4DA6FF;
 }
 
 .default .portfolio-filters li:hover{
-    background-color: #E4545B;
+    background-color: #4DA6FF;
     color:#fff;
-    border-color:#E4545B;
+    border-color:#4DA6FF;
 }
 
 .default .portfolio-filters li.active{
-    background-color:#E4545B;
+    background-color:#4DA6FF;
     color:#fff;
-    border-color:#E4545B;
+    border-color:#4DA6FF;
 }
 
 .default .image-overlay{
-    background: rgba(228,84,91,.6);
+    background: rgba(77,166,255,.6);
 }
 
 .default .cv-timeline-main:before {
-    background:#E4545B;
+    background:#4DA6FF;
 }
 
 .default .cv-timeline-main > li .time-icon {
-    color: #E4545B;
+    color: #4DA6FF;
 }
 
 .default .cv-timeline-main h4 {
-    color: #E4545B;
+    color: #4DA6FF;
 }
 .default #testimonials .section-heading h2{
     color:#FFF;
 }
 
 .default #testimonials .owl-controls .owl-page.active span {
-    background: #E4545B;
+    background: #4DA6FF;
 }
 
 .default .contact-address i {
-    border: 1px solid #E4545B;
-    color: #E4545B;
+    border: 1px solid #4DA6FF;
+    color: #4DA6FF;
 }
 
 .default .scrollup {
-	background:rgba(228,84,91,.9);
+	background:rgba(34,34,34,.9);
 }
 
 .default .scrollup:hover{
-	background:rgba(228,84,91,.6);
+	background:rgba(34,34,34,.6);
 }
 
 .default footer {
-    background:#E4545B;
+    background:#222222;
 }
 
 .default footer ul.footer-social li a:hover {
-    color: #E4545B;
+    color: #222222;
+}
+
+.experience-link {
+	color: #222222;
 }
