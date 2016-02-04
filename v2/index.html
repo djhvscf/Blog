@@ -61,11 +61,7 @@
         <div class="slider-overlay"></div>
 		<div class="homeslider flexslider">
             <ul class="slides">
-                <!-- <li class="slide1 bg"></li>
-                <li class="slide2 bg"></li>
-                <li class="slide3 bg"></li>
-				<li class="slide4 bg"></li>-->
-				<li class="slide5 bg"></li>
+                <li class="slide5 bg"></li>
 				<li class="slide6 bg"></li>
             </ul>
          </div><!--/ homeslider-->
@@ -91,7 +87,7 @@
                  </div>
                 <!--  /.header-social-->
                  <div class="intro-btn-main page-scroll">
-                 <a class="btn btn-primary" href="#works">Portfolio</a>
+                 <a class="btn btn-primary" href="#works">Experience</a>
                  </div>
                 </div>
                </div>
@@ -115,7 +111,9 @@
                         <li class="page-scroll active"><a href="#home">Home</a></li>
                         <li class="page-scroll"><a href="#about" >About</a></li>
                         <li class="page-scroll"><a href="#works">Portfolio</a></li>
-                        <li class="page-scroll"><a href="#experience" >Resume</a></li>
+                        <li class="page-scroll"><a href="#experience" >Experience</a></li>
+						<li class="page-scroll"><a href="#education" >Education</a></li>
+						<li class="page-scroll"><a href="#certification" >Certifications</a></li>
 						<!--<li class="page-scroll"><a href="http://djhvscf.github.io/Blog/blog.html" >Blog</a></li>-->
 						<li class="page-scroll"><a href="#contact">Contact</a></li>
 						</ul>
@@ -257,13 +255,14 @@
      <!--End experience-->
   
     <!--Start Education-->
-    <section id="education">
-         <!--Start heading-->
-          <div class="section-heading"> <h2>Education</h2></div>
-          <!--End heading-->
-          
+    <section id="education" class="section">
         <div class="container">
-            <ul class="cv-timeline-main">
+        
+			<!--Start heading-->
+			<div class="section-heading"> <h2>Education</h2></div>
+			<!--End heading-->
+          
+			<ul class="cv-timeline-main">
                    <li>
                         <div class="c-date"><span>2016 - 2017 (Expected)</span></div>
                         <i class="time-icon fa fa-book fa-2x"></i>
@@ -271,19 +270,6 @@
                         <h3>Systems Engineering</h3>
                         <h4>Universidad Autónoma de Centroamérica </h4>
                         <p>Bachelor's degree</p>
-                        </div>
-                    </li>
-				   
-				   <li>
-                        <div class="c-date"><span>2016</span></div>
-                        <i class="time-icon fa fa-certificate fa-2x"></i>
-                        <div class="cv-detail">
-                        <h3>Scrum Fundamentals 
-							<span class="label label-success label-xs"><a href="https://drive.google.com/file/d/0B0VokOTJJG_lMnZ4Wll5cjBhYWM/view?usp=sharing" target="_blank" class="more-info">See certificate</a></span>
-							<span class="label label-info label-xs"><a href="http://www.scrumstudy.com/Scrum-Fundamentals-Certified.asp" target="_blank" class="more-info">More info</a></span>
-						</h3>
-                        <h4>ScrumStudy</h4>
-                        <p>Scrum Fundamentals Certified</p>
                         </div>
                     </li>
 				   
@@ -321,16 +307,6 @@
 					
 					<li>
                         <div class="c-date"><span>2014</span></div>
-                        <i class="time-icon fa fa-certificate fa-2x"></i>
-                        <div class="cv-detail">
-                        <h3>Android Course</h3>
-                        <h4>Universidad Cenfotec</h4>
-                        <p></p>
-                        </div>
-                    </li>
-
-					<li>
-                        <div class="c-date"><span>2014</span></div>
                         <i class="time-icon fa fa-book fa-2x"></i>
                         <div class="cv-detail">
                         <h3>Git Course (GitHub, TortoiseGit)</h3>
@@ -342,7 +318,66 @@
          </div> <!-- /.container-->
     </section>
      <!--End Education-->
- 
+	 
+	 
+	 <!--Start Certifications-->
+    <section id="certification" class="section">
+        <div class="container">
+        
+			<!--Start heading-->
+			<div class="section-heading"> <h2>Certifications</h2></div>
+			<!--End heading-->
+			
+			<ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                    <a href="#scrum" aria-controls="scrum"
+                     role="tab" data-toggle="tab">Scrum Fundamentals <small>(ScrumStudy)</small></a></li>
+                    <li role="presentation"><a href="#android"
+                     aria-controls="android" role="tab"
+                     data-toggle="tab">Android Fundamentals <small>(UCenfotec)</small></a></li>
+                    <li role="presentation"><a href="#htmlcssjs"
+                     aria-controls="htmlcssjs" role="tab"
+                     data-toggle="tab">HTML, CSS and Javascript <small>(Coursera)</small></a></li>
+                </ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in active" id="scrum">
+                        <h3>Scrum Fundamentals Certified <small>ScrumStudy</small></h3>
+						<p>'Scrum Fundamentals Certified' course is tailored to help anyone interested to know more about Scrum; 
+						learn about key concepts in Scrum as defined in the SBOK™ Guide; and to get a basic understanding of how 
+						Scrum framework works in delivering successful projects. 
+						This course is included as a part of Free Primary Lifetime Membership. 
+						The purpose of the 'Scrum Fundamentals Certified' exam is to confirm you have basic understanding of the Scrum framework. 
+						On passing the exam, you will be accredited as "Scrum Fundamentals Certified". 
+						You will also be provided with 10 PMI approved PDUs.</p>
+						<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#scrumstudy">
+						  See Certificate
+						</button>
+                    </div>		
+					<div role="tabpanel" class="tab-pane fade" id="android">
+						<h3>Android Fundamentals <small>Universidad Cenfotec</small></h3>
+						<p>This course teachs the basic concepts of Android. It helps anyone to develop basic applications and manage the hardware of the cellphone.</p>
+						<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#androidCenfotec">
+						  See Certificate
+						</button>
+					</div>		
+					<div role="tabpanel" class="tab-pane fade" id="htmlcssjs">
+						<h3>HTML, CSS and Javascript <small>Coursera</small></h3>
+						<p>This course will teach you the essential elements of web page development, covering HTML, CSS and JavaScript. 
+						No previous experience of these technologies is necessary, although it is helpful if you have some prior programming experience. 
+						First, HTML together with CSS are discussed and explored. 
+						Then we move on to consider the essential components of JavaScript, including variables, arrays, loops, events and functions. 
+						Then we explore more advanced elements of JavaScript control, including advanced use of functions, event control, 
+						array processing, and DOM manipulation</p>
+						<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#htmlcssjscoursera">
+						  See Certificate
+						</button>
+					</div>		
+				</div>
+			
+         </div> <!-- /.container-->
+    </section>
+     <!--End Certification-->
+	 
   <!--start call to action--> 
   <section id="call-to-action" data-parallax="images/parallax/cta-cv.jpg">
        <div class="overlay"></div>
@@ -439,6 +474,63 @@
         </div> <!--/.container-->
     </footer>
     <!--End footer-->
+	
+	<!--Modal ScrumStudy-->
+	<div class="modal fade" id="scrumstudy" tabindex="-1" role="dialog" aria-labelledby="scrumLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="scrumLabel">Scrum Fundamentals Certified</h4>
+		  </div>
+		  <div class="modal-body">
+			<img src="../v2/images/certification/scrumfundamentals.png" alt="Scrum Fundamentals" class="img-rounded">
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!--End Modal ScrumStudy-->
+	
+	<!--Modal Android-->
+	<div class="modal fade" id="androidCenfotec" tabindex="-1" role="dialog" aria-labelledby="androidLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="androidLabel">Android Fundamentals</h4>
+		  </div>
+		  <div class="modal-body">
+			<img src="../v2/images/certification/android.png" alt="Android Fundamentals" class="img-rounded">
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!--End Modal Android-->
+	
+	<!--Modal HTML, CSS and Javascript-->
+	<div class="modal fade" id="htmlcssjscoursera" tabindex="-1" role="dialog" aria-labelledby="htmlcssjscourseraLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="htmlcssjscourseraLabel">HTML, CSS and Javascript</h4>
+		  </div>
+		  <div class="modal-body">
+			<img src="../v2/images/certification/htmljscss.png" alt="HTML, CSS and Javascript" class="img-rounded">
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!--End Modal HTML, CSS and Javascript-->
    
     <!-- Scroll top -->
     <a href="#" class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
