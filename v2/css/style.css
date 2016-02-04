@@ -221,6 +221,13 @@ input[type="color"]:focus,
 	clear:both;
 }
 
+.tab-content {
+	border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
 .scrollup {
     width:35px;
     height:35px;
@@ -891,8 +898,11 @@ html[xmlns] .slides {
 /*========================================================================*/
 
 
+#certification{
+	background:#F7F8F8;
+}
+
 #education{
-	padding:0px 0px 100px;
 	background:#F7F8F8;
 }
 
