@@ -72,9 +72,10 @@
                    <div class="col-md-12 header-main">
                     <h2>DENNIS HERNANDEZ</h2>
                       <ul id="text-slider">
-                        <li><h3>Full Stack Developer</h3></li>
-                        <li><h3>Back-End Developer</h3></li>
-                        <li><h3>Front-End Developer</h3></li>
+                          <li><h3>SCRUM Master Certified</h3></li>
+                          <li><h3>Full Stack Developer</h3></li>
+                          <li><h3>Back-End Developer</h3></li>
+                          <li><h3>Front-End Developer</h3></li>
                     </ul>
                  <div class="header-social">
                      <ul>
@@ -210,7 +211,7 @@
                         </h3>
                         <h4>Software Engineer</h4>
                         <p>
-                            
+
                         </p>
                     </div>
                 </li>
@@ -344,9 +345,12 @@
 			<!--End heading-->
 			
 			<ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active">
+                    <li role="presentation">
                     <a href="#scrum" aria-controls="scrum"
                      role="tab" data-toggle="tab">Scrum Fundamentals <small>(ScrumStudy)</small></a></li>
+                    <li role="presentation" class="active">
+                    <a href="#scrummaster" aria-controls="scrummaster"
+                    role="tab" data-toggle="tab">Scrum Master Certified <small>(ScrumStudy)</small></a></li>
                     <li role="presentation"><a href="#android"
                      aria-controls="android" role="tab"
                      data-toggle="tab">Android Fundamentals <small>(UCenfotec)</small></a></li>
@@ -355,7 +359,7 @@
                      data-toggle="tab">HTML, CSS and Javascript <small>(Coursera)</small></a></li>
                 </ul>
 				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane fade in active" id="scrum">
+					<div role="tabpanel" class="tab-pane fade" id="scrum">
                         <h3>Scrum Fundamentals Certified <small>ScrumStudy</small></h3>
 						<p>'Scrum Fundamentals Certified' course is tailored to help anyone interested to know more about Scrum; 
 						learn about key concepts in Scrum as defined in the SBOK™ Guide; and to get a basic understanding of how 
@@ -367,7 +371,17 @@
 						<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#scrumstudy">
 						  See Certificate
 						</button>
-                    </div>		
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade in active" id="scrummaster">
+                        <h3>Scrum Master Certified <small>ScrumStudy</small></h3>
+                        <p>Scrum Master Certified (SMC™) professionals are facilitators who ensure that the Scrum Team is provided
+                            with an environment conducive to completing the project successfully. The Scrum Master guides, facilitiates,
+                            and teaches Scrum practices to everyone involved in the project; clears impediments for the team; and, ensures
+                            that Scrum processes are being followed.</p>
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#scrummasterstudy">
+                            See Certificate
+                        </button>
+                    </div>
 					<div role="tabpanel" class="tab-pane fade" id="android">
 						<h3>Android Fundamentals <small>Universidad Cenfotec</small></h3>
 						<p>This course teachs the basic concepts of Android. It helps anyone to develop basic applications and manage the hardware of the cellphone.</p>
@@ -508,7 +522,26 @@
 	  </div>
 	</div>
 	<!--End Modal ScrumStudy-->
-	
+
+    <!--Modal ScrumStudy Scrum Master-->
+    <div class="modal fade" id="scrummasterstudy" tabindex="-1" role="dialog" aria-labelledby="scrumLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="scrumMasterLabel">Scrum Master Certified</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="images/certification/scrummaster.PNG" alt="Scrum Master Certified" class="img-rounded">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Modal ScrumStudy Scrum Master-->
+
 	<!--Modal Android-->
 	<div class="modal fade" id="androidCenfotec" tabindex="-1" role="dialog" aria-labelledby="androidLabel">
 	  <div class="modal-dialog" role="document">
