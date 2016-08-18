@@ -29,13 +29,29 @@
 		slideshowSpeed:12000,
     });
   });
-  
-  
-	jQuery('#text-slider').bxSlider({
-		mode: 'fade',
-		pager: false,
-		auto: true,
-		controls: false
+
+	$("#text-slider").typed({
+		strings: [
+			"SCRUM Master Certified", 
+			"Full Stack Developer", 
+			".NET", 
+			"Javascript", 
+			"CSS3",
+			"Angular JS",
+			"React",
+			"ES6",
+			"C#",
+			"Node.js",
+			"HTML5",
+			"Java",
+			"PHP"
+			],
+		typeSpeed: 30,
+		backSpeed: 30,
+		backDelay: 750,
+		shuffle: true,
+		loop: true,
+		loopCount: 15
 	});
 
 
