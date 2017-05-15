@@ -63,13 +63,13 @@
 	   setTimeout(function () {
 		   jQuery('#list').mixItUp({
 				load: {
-					filter: '.Javascript'
+					filter: '.C'
 				},
 				controls: {
 					live: true
 				}
 			});
-			$('#list').mixItUp('filter', '.JavaScript');
+			$('#list').mixItUp('filter', '.C');
 	   }, 2000);
 
 	
